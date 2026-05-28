@@ -6,18 +6,18 @@ import pyvale.sensorsim as sens
 import pyvale.mooseherder as mh
 
 
-def interp_sim_to_grid(interp_grid: np.ndarray, # shape=(3,Nx,Ny,Nz) 
+def interp_sim_to_grid(interp_grid: np.ndarray, # shape=(3,Nx,Ny,Nz)
                        sim_data: mh.SimData,
                        comp_keys: tuple[str,...],
                        spatial_dims: sens.EDim = sens.EDim.THREED,
                        ) -> np.ndarray:
 
     # interp_grid shape is (3, Nx, Ny, Nz) -> spatial_shape is (Nx, Ny, Nz)
-    spatial_grid_shape = interp_grid.shape[1:]  
+    spatial_grid_shape = interp_grid.shape[1:]
 
     # Reshape to (N_total_points, 3)
-    interp_points = interp_grid.reshape(3, -1).T 
-    
+    interp_points = interp_grid.reshape(3, -1).T
+
     pyvista_interp = sens.simdata_to_pyvista_interp(sim_data,
                                                     comp_keys,
                                                     spatial_dims)
@@ -52,24 +52,29 @@ def inner_vec_by_step(lower: float, upper: float, step: float) -> np.ndarray:
 def inner_vec_by_divs(lower: float, upper: float, divs: int) -> np.ndarray:
     step = (upper - lower) / divs
     start = lower + (step / 2)
-    stop = upper - (step / 2)    
+    stop = upper - (step / 2)
     return np.linspace(start, stop, divs)
 
 
 def main() -> None:
     #----------------------------------------------------------------------
-    # Loading in the exodus simulation output 
+    # Loading in the exodus simulation output
     exodus_name = "notch3d_elas_het_24f.e"
-           
+    # notch3d_elas_24f.e
+    # notch3d_elas_het_24f.e
+    # notch3d_plas_24f.e
+    # notch3d_plas_het_24f.e
+    # OR plate3d_elas_24f.e etc
+
     script_path = Path(__file__).resolve().parent
     print(f"{script_path=}")
-     
+
     output_path = script_path.parent / 'data'
     print(f"{output_path=}")
 
     output_exodus = output_path / exodus_name
     exodus_reader = mh.ExodusLoader(output_exodus)
-    
+
     print("\nReading exodus file with ExodusReader:")
     print(f"{output_exodus=}\n")
 
@@ -78,7 +83,7 @@ def main() -> None:
     # Prints out the fields of our dataclass so we can see what we have.
     print("SimData from 'load_all':")
     sens.simtools.print_sim_data(sim_data)
-    
+
     sens.simtools.print_dimensions(sim_data)
 
     #----------------------------------------------------------------------
@@ -90,8 +95,8 @@ def main() -> None:
     plate_width = 25e-3
     plate_thick = 1e-3
 
-    x_vec = inner_vec_by_divs(plate_width/2,-plate_width/2,grid_pts) 
-    y_vec = (inner_vec_by_divs(plate_width/2,-plate_width/2,grid_pts) 
+    x_vec = inner_vec_by_divs(plate_width/2,-plate_width/2,grid_pts)
+    y_vec = (inner_vec_by_divs(plate_width/2,-plate_width/2,grid_pts)
              + plate_height/2)
     z_vec = np.full((1,),0.0,dtype=np.float64)
 
@@ -99,14 +104,14 @@ def main() -> None:
     print(f"{x_vec.shape=}")
     print(f"{y_vec.shape=}")
     print(f"{z_vec.shape=}")
-    
+
     (x_grid, y_grid, z_grid) = np.meshgrid(x_vec, y_vec, z_vec, indexing='ij')
         # Stack them along a new first axis to create the (3, Nx, Ny, Nz) array
     interp_grid = np.stack([x_grid, y_grid, z_grid], axis=0)
     print("interp_grid.shape=(3,Nx,Ny,Nz)")
-    print(f"{interp_grid.shape=}") 
+    print(f"{interp_grid.shape=}")
 
-    
+
     interp_fields = interp_sim_to_grid(interp_grid,
                                        sim_data,
                                        ("strain_xx","strain_yy","strain_xy"))
@@ -167,7 +172,7 @@ def main() -> None:
     plot_file = images_dir / "strain_components_heatmap.png"
     plt.savefig(plot_file, dpi=300, bbox_inches="tight")
     print(f"Saved plot to {plot_file}")
-    
-    
+
+
 if __name__ == "__main__":
     main()
