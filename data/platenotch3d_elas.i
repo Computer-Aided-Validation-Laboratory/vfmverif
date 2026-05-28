@@ -26,7 +26,7 @@ PRatio = 0.3      # -
 
 [Mesh]
     type = FileMesh
-    file = 'mesh3d_holeplate.msh'
+    file = 'mesh3d_notchplate.msh'
 []
 
 [Physics/SolidMechanics/QuasiStatic]
@@ -141,5 +141,5 @@ PRatio = 0.3      # -
 [Outputs]
     exodus = true
     csv = true
-    file_base = 'hole3d_elas_${endTime}f' 
+    file_base = 'notch3d_elas_${endTime}f' 
 []

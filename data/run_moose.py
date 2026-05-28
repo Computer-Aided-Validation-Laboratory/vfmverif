@@ -3,8 +3,7 @@ from pathlib import Path
 from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner)
 
-
-MOOSE_FILE = "platehole3d_plas_ad.i"
+MOOSE_FILE = "platenotch3d_plas_het.i"
 MOOSE_PATH = Path.cwd() / MOOSE_FILE
 
 USER_DIR = Path.home()
@@ -18,7 +17,7 @@ def main() -> None:
     moose_config = MooseConfig(config)
     moose_runner = MooseRunner(moose_config)
 
-    moose_runner.set_run_opts(n_tasks = 1,
+    moose_runner.set_run_opts(n_tasks = 2,
                               n_threads = 1,
                               redirect_out = False)
 

@@ -8,7 +8,7 @@ import time
 from pathlib import Path
 from pyvale.mooseherder import GmshRunner
 
-GMSH_FILE = "platewithhole3d.geo"
+GMSH_FILE = "mesh3d_holeplate.geo"
 GMSH_PATH = Path.cwd() / GMSH_FILE
 
 PARSE_ONLY = False
