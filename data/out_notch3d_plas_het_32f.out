@@ -1,0 +1,165 @@
+Setting Up
+  Initializing
+    Finished Initializing Equation Systems                                               [[33m  0.59 s[39m] [[33m  411 MB[39m]
+  Finished Initializing                                                                  [[33m  0.63 s[39m] [[33m  411 MB[39m]
+Finished Setting Up                                                                      [[33m  0.79 s[39m] [[33m  411 MB[39m]
+Framework Information:
+MOOSE Version:           git commit b85414d92b on 2025-11-25
+LibMesh Version:         910736a3a20aded528c3ba99371ce65980dc8e2c
+PETSc Version:           3.24.0
+SLEPc Version:           3.24.0
+Current Time:            Tue Jun 16 10:27:31 2026
+Executable Timestamp:    Wed Nov 26 18:13:58 2025
+
+Input File(s):
+  /home/lloydf/vfmverif/data/platenotch3d_plas_het.i
+
+Command Line Argument(s):
+  --n-threads=2
+
+Checkpoint:
+  Wall Time Interval:      Every 3600 s
+  User Checkpoint:         Disabled
+  # Checkpoints Kept:      2
+  Execute On:              TIMESTEP_END 
+
+Parallelism:
+  Num Processors:          2
+  Num Threads:             2
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          3
+  Spatial Dimension:       3
+  Nodes:                   
+    Total:                 9925
+    Local:                 5027
+    Min/Max/Avg:           4898/5027/4962
+  Elems:                   
+    Total:                 5652
+    Local:                 2826
+    Min/Max/Avg:           2826/2826/2826
+  Num Subdomains:          1
+  Num Partitions:          2
+  Partitioner:             metis
+
+Nonlinear System:
+  Num DOFs:                59529
+  Num Local DOFs:          30338
+  Variables:               { "vonmises_stress" "strain_xx" "strain_yy" "strain_zz" "strain_xy" ... "stress_yy" 
+                             "stress_zz" "stress_xy" "stress_yz" "stress_xz" } { "disp_x" "disp_y" "disp_z" 
+                             } 
+  Finite Element Types:    "LAGRANGE" "LAGRANGE" 
+  Approximation Orders:    "FIRST" "SECOND" 
+
+Auxiliary System:
+  Num DOFs:                16956
+  Num Local DOFs:          8478
+  Variables:               { "effective_plastic_strain_out" "yield_stress_field" "yield_stress_out" } 
+  Finite Element Types:    "MONOMIAL" 
+  Approximation Orders:    "CONSTANT" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  TimeIntegrator(s):       ImplicitEuler
+  Solver Mode:             NEWTON 
+  PETSc Preconditioner:    lu 
+  MOOSE Preconditioner:    SMP 
+Currently Executing
+  Finished Performing Initial Setup                                                      [[33m  7.37 s[39m] [[33m  415 MB[39m]
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+----------------+----------------+
+| time           | disp_y_max     | react_y_top    | stress_vm_max  |
++----------------+----------------+----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+----------------+----------------+
+
+
+Time Step 1, time = 1, dt = 1
+ Skipping predictor this step
+ 0 Nonlinear |R| = [32m3.755986e+03[39m
+
+    Computing Jacobian                                                                   [[33m  6.42 s[39m] [[33m  491 MB[39m]
+      0 Linear |R| = [32m3.755986e+03[39m
+      1 Linear |R| = [32m3.377083e-10[39m
+ 1 Nonlinear |R| = [32m9.591966e+02[39m
+    Computing Jacobian                                                                   [[33m  6.32 s[39m] [[33m  584 MB[39m]
+      0 Linear |R| = [32m9.591966e+02[39m
+      1 Linear |R| = [32m2.352450e-09[39m
+ 2 Nonlinear |R| = [33m9.388887e+02[39m
+    Computing Jacobian                                                                   [[33m  6.42 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m9.388887e+02[39m
+      1 Linear |R| = [32m2.388779e-09[39m
+ 3 Nonlinear |R| = [33m9.116489e+02[39m
+    Computing Jacobian                                                                   [[33m  6.15 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m9.116489e+02[39m
+      1 Linear |R| = [32m2.429720e-09[39m
+ 4 Nonlinear |R| = [32m8.267025e+02[39m
+    Computing Jacobian                                                                   [[33m  6.57 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m8.267025e+02[39m
+      1 Linear |R| = [32m5.527535e-10[39m
+ 5 Nonlinear |R| = [32m7.770116e+02[39m
+    Computing Jacobian                                                                   [[33m  6.64 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m7.770116e+02[39m
+      1 Linear |R| = [32m3.397302e-09[39m
+ 6 Nonlinear |R| = [33m7.625761e+02[39m
+    Computing Jacobian                                                                   [[33m  6.33 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m7.625761e+02[39m
+      1 Linear |R| = [32m2.092091e-09[39m
+ 7 Nonlinear |R| = [33m7.409328e+02[39m
+    Computing Jacobian                                                                   [[33m  6.83 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m7.409328e+02[39m
+      1 Linear |R| = [32m1.105202e-09[39m
+ 8 Nonlinear |R| = [32m7.016410e+02[39m
+    Computing Jacobian                                                                   [[33m  6.66 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m7.016410e+02[39m
+      1 Linear |R| = [32m1.083225e-09[39m
+ 9 Nonlinear |R| = [33m6.934027e+02[39m
+    Computing Jacobian                                                                   [[33m  6.59 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m6.934027e+02[39m
+      1 Linear |R| = [32m2.633713e-10[39m
+10 Nonlinear |R| = [32m5.655744e+02[39m
+    Computing Jacobian                                                                   [[33m  6.61 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m5.655744e+02[39m
+      1 Linear |R| = [32m1.455463e-09[39m
+11 Nonlinear |R| = [32m4.917097e+02[39m
+    Computing Jacobian                                                                   [[33m  6.55 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m4.917097e+02[39m
+      1 Linear |R| = [32m1.575104e-09[39m
+12 Nonlinear |R| = [32m4.196519e+02[39m
+    Computing Jacobian                                                                   [[33m  6.65 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m4.196519e+02[39m
+      1 Linear |R| = [32m1.139837e-09[39m
+13 Nonlinear |R| = [32m3.631227e+02[39m
+    Computing Jacobian                                                                   [[33m  6.36 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m3.631227e+02[39m
+      1 Linear |R| = [32m1.269052e-09[39m
+14 Nonlinear |R| = [32m2.906950e+02[39m
+    Computing Jacobian                                                                   [[33m  6.36 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m2.906950e+02[39m
+      1 Linear |R| = [32m2.925572e-10[39m
+15 Nonlinear |R| = [32m2.379841e+02[39m
+    Computing Jacobian                                                                   [[33m  6.28 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m2.379841e+02[39m
+      1 Linear |R| = [32m2.806457e-10[39m
+16 Nonlinear |R| = [32m1.803846e+02[39m
+    Computing Jacobian                                                                   [[33m  6.72 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m1.803846e+02[39m
+      1 Linear |R| = [32m8.469490e-11[39m
+17 Nonlinear |R| = [32m1.168220e+02[39m
+    Computing Jacobian                                                                   [[33m  6.79 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m1.168220e+02[39m
+      1 Linear |R| = [32m6.037323e-11[39m
+18 Nonlinear |R| = [33m1.132665e+02[39m
+    Computing Jacobian                                                                   [[33m  6.73 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m1.132665e+02[39m
+      1 Linear |R| = [32m5.976753e-11[39m
+19 Nonlinear |R| = [33m1.076046e+02[39m
+    Computing Jacobian                                                                   [[33m  6.67 s[39m] [[33m  586 MB[39m]
+      0 Linear |R| = [32m1.076046e+02[39m
+      1 Linear |R| = [32m5.800232e-11[39m
+20 Nonlinear |R| = [32m1.006006e+02[39m

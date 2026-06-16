@@ -45,6 +45,8 @@ file_name = "mesh3d_notchplate.msh";
 tol = mesh_size/4; // Used for bounding box selection tolerance
 tol_thick = plate_thick/4;
 
+ref_factor = 2.0;
+
 second_ord_incomp = 1;
 //------------------------------------------------------------------------------
 // Geometry Definition
@@ -114,8 +116,35 @@ BooleanDifference{ Surface{:}; Delete; }
 // Mesh sizing
 
 // Global characteristic length
-Mesh.CharacteristicLengthMin = mesh_size;
+Mesh.CharacteristicLengthMin = mesh_size / ref_factor;
 Mesh.CharacteristicLengthMax = mesh_size;
+
+// Mesh Refinement Fields around notches
+Field[1] = Box;
+Field[1].VIn = mesh_size / ref_factor;
+Field[1].VOut = mesh_size;
+Field[1].XMin = -plate_width/2 - tol;
+Field[1].XMax = -plate_width/2 + notch_1_rad + tol;
+Field[1].YMin = notch_1_loc_y - notch_1_rad - tol;
+Field[1].YMax = notch_1_loc_y + notch_1_rad + tol;
+Field[1].ZMin = -1.0;
+Field[1].ZMax = 1.0;
+Field[1].Thickness = mesh_size * 2;
+
+Field[2] = Box;
+Field[2].VIn = mesh_size / ref_factor;
+Field[2].VOut = mesh_size;
+Field[2].XMin = plate_width/2 - notch_2_rad - tol;
+Field[2].XMax = plate_width/2 + tol;
+Field[2].YMin = notch_2_loc_y - notch_2_rad - tol;
+Field[2].YMax = notch_2_loc_y + notch_2_rad + tol;
+Field[2].ZMin = -1.0;
+Field[2].ZMax = 1.0;
+Field[2].Thickness = mesh_size * 2;
+
+Field[3] = Min;
+Field[3].FieldsList = {1, 2};
+Background Field = 3;
 
 // NO Recombine on surface - use free triangular/tet/prism mesh as requested
 
@@ -139,6 +168,16 @@ ps2() = Surface In BoundingBox{
     -plate_width/2-tol,0.0-tol,0.0-tol,
     plate_width/2+tol,0.0+tol,plate_thick+tol};
 Physical Surface("bc-bot") = {ps2()};
+
+// Mid-points on top and bottom boundaries for pinning X/Z displacement
+p_bot_1() = Point In BoundingBox{-tol, -tol, -tol, tol, tol, tol};
+p_bot_2() = Point In BoundingBox{-tol, -tol, plate_thick-tol, tol, tol, plate_thick+tol};
+Physical Point("bc-bot-point-back") = {p_bot_1(0)};
+Physical Point("bc-bot-point-front") = {p_bot_2(0)};
+
+p_top_1() = Point In BoundingBox{-tol, plate_height-tol, -tol, tol, plate_height+tol, tol};
+p_top_2() = Point In BoundingBox{-tol, plate_height-tol, plate_thick-tol, tol, plate_height+tol, plate_thick+tol};
+Physical Point("bc-top-mid") = {p_top_1(0), p_top_2(0)};
 
 ps3() = Surface In BoundingBox{
     -plate_width/2-tol,0.0-tol,plate_thick-tol_thick,

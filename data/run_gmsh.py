@@ -4,30 +4,42 @@ License: MIT
 Copyright (C) 2024 The Computer Aided Validation Team
 ================================================================================
 """
+import argparse
 import time
 from pathlib import Path
 from pyvale.mooseherder import GmshRunner
 
-GMSH_FILE = "mesh3d_holeplate.geo"
-GMSH_PATH = Path.cwd() / GMSH_FILE
-
+PROJ_ROOT = Path(__file__).resolve().parent.parent
 PARSE_ONLY = False
-
 USER_DIR = Path.home()
 
+
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-i", "--input",
+        type=str,
+        default="mesh3d_holeplate.geo",
+        help="Input geo file name or path"
+    )
+    args = parser.parse_args()
+
+    gmsh_path = Path(args.input)
+    if not gmsh_path.is_absolute():
+        gmsh_path = PROJ_ROOT / "data" / gmsh_path
+
     gmsh_runner = GmshRunner(USER_DIR / "gmsh/bin/gmsh")
-    print(GMSH_PATH)
+    print(gmsh_path)
     gmsh_start = time.perf_counter()
-    gmsh_runner.run(GMSH_PATH,parse_only=PARSE_ONLY)
-    gmsh_run_time = time.perf_counter()-gmsh_start
+    gmsh_runner.run(gmsh_path, parse_only=PARSE_ONLY)
+    gmsh_run_time = time.perf_counter() - gmsh_start
 
     print()
-    print("="*80)
+    print("=" * 80)
     print(f"Gmsh run time = {gmsh_run_time:.2f} seconds")
-    print("="*80)
+    print("=" * 80)
     print()
+
 
 if __name__ == "__main__":
     main()
-

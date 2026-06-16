@@ -3,6 +3,7 @@ from pathlib import Path
 from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner)
 
+PROJ_ROOT = Path(__file__).resolve().parent.parent
 MOOSE_FILES = [
     "platehole3d_elas.i",
     "platehole3d_elas_het.i",
@@ -36,7 +37,7 @@ def main() -> None:
     total_start = time.perf_counter()
 
     for filename in MOOSE_FILES:
-        moose_file = Path.cwd() / filename
+        moose_file = PROJ_ROOT / "data" / filename
         if not moose_file.exists():
             print(f"\nFile not found: {filename}")
             continue
@@ -45,7 +46,8 @@ def main() -> None:
         moose_start = time.perf_counter()
 
         try:
-            moose_runner.run(moose_file)
+            from run_helpers import run_moose_and_tee
+            run_moose_and_tee(moose_runner, moose_file)
             moose_run_time = time.perf_counter() - moose_start
             print(
                 f"Finished {filename} in "

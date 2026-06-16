@@ -2,6 +2,7 @@
 # Repo Specific Ignores
 
 .antigravitycli/
+.*/
 
 #--------------------------------------------
 # Byte-compiled / optimized / DLL files

@@ -33,7 +33,7 @@ If(!Exists(MR))
     MR = 2;
 EndIf
 If(!Exists(bias_factor))
-    bias_factor = 1.2;
+    bias_factor = 1.25;
 EndIf
 file_name = "mesh3d_holeplate.msh"; 
 
@@ -141,6 +141,16 @@ ps2() = Surface In BoundingBox{
     -plate_width/2-tol,0.0-tol,0.0-tol,
     plate_width/2+tol,0.0+tol,plate_thick+tol};
 Physical Surface("bc-bot") = {ps2()};
+
+// Mid-points on top and bottom boundaries for pinning X/Z displacement
+p_bot_1() = Point In BoundingBox{-tol, -tol, -tol, tol, tol, tol};
+p_bot_2() = Point In BoundingBox{-tol, -tol, plate_thick-tol, tol, tol, plate_thick+tol};
+Physical Point("bc-bot-point-back") = {p_bot_1(0)};
+Physical Point("bc-bot-point-front") = {p_bot_2(0)};
+
+p_top_1() = Point In BoundingBox{-tol, plate_height-tol, -tol, tol, plate_height+tol, tol};
+p_top_2() = Point In BoundingBox{-tol, plate_height-tol, plate_thick-tol, tol, plate_height+tol, plate_thick+tol};
+Physical Point("bc-top-mid") = {p_top_1(0), p_top_2(0)};
 
 ps3() = Surface In BoundingBox{
     -plate_width/2-tol,0.0-tol,plate_thick-tol_thick,
