@@ -3,7 +3,6 @@ from pathlib import Path
 from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner)
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
 USER_DIR = Path.home()
 
 
@@ -26,7 +25,8 @@ def main() -> None:
     )
 
     # Find all .i files in the current directory
-    moose_files = sorted(list((PROJ_ROOT / "data").glob("*.i")))
+    script_dir = Path(__file__).resolve().parent
+    moose_files = sorted(list(script_dir.glob("*.i")))
 
     if not moose_files:
         print(

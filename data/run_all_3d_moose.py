@@ -3,7 +3,6 @@ from pathlib import Path
 from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner)
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
 USER_DIR = Path.home()
 
 
@@ -24,7 +23,8 @@ def main() -> None:
     )
 
     # Find all 3D .i files
-    moose_files = sorted(list((PROJ_ROOT / "data").glob("*3d*.i")))
+    script_dir = Path(__file__).resolve().parent
+    moose_files = sorted(list(script_dir.glob("*3d*.i")))
 
     if not moose_files:
         print("No 3D MOOSE input (*3d*.i) files found.")

@@ -4,7 +4,6 @@ from pathlib import Path
 from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner)
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
 USER_DIR = Path.home()
 
 
@@ -20,7 +19,7 @@ def main() -> None:
 
     moose_path = Path(args.input)
     if not moose_path.is_absolute():
-        moose_path = PROJ_ROOT / "data" / moose_path
+        moose_path = Path(__file__).resolve().parent / moose_path
 
     config = {
         "main_path": USER_DIR / "moose",

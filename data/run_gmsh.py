@@ -9,7 +9,6 @@ import time
 from pathlib import Path
 from pyvale.mooseherder import GmshRunner
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
 PARSE_ONLY = False
 USER_DIR = Path.home()
 
@@ -26,7 +25,7 @@ def main() -> None:
 
     gmsh_path = Path(args.input)
     if not gmsh_path.is_absolute():
-        gmsh_path = PROJ_ROOT / "data" / gmsh_path
+        gmsh_path = Path(__file__).resolve().parent / gmsh_path
 
     gmsh_runner = GmshRunner(USER_DIR / "gmsh/bin/gmsh")
     print(gmsh_path)

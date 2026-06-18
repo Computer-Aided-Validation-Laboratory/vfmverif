@@ -11,13 +11,13 @@ from pyvale.mooseherder import (MooseConfig,
                                 MooseRunner,
                                 GmshRunner)
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
+SCRIPT_DIR = Path(__file__).resolve().parent
 GMSH_TAG = "stc_full"
 MOOSE_FILE = "stc_thermal_cufull.i"
 
 GMSH_FILE = GMSH_TAG + ".geo"
-GMSH_PATH = PROJ_ROOT / "simulations/gmsh_meshes" / GMSH_FILE
-MOOSE_PATH = PROJ_ROOT / "simulations/stc_no_coil" / MOOSE_FILE
+GMSH_PATH = SCRIPT_DIR / "simulations/gmsh_meshes" / GMSH_FILE
+MOOSE_PATH = SCRIPT_DIR / "simulations/stc_no_coil" / MOOSE_FILE
 USER_DIR = Path.home()
 
 

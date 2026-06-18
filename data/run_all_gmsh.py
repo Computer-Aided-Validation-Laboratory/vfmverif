@@ -8,7 +8,6 @@ import time
 from pathlib import Path
 from pyvale.mooseherder import GmshRunner
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
 PARSE_ONLY = False
 USER_DIR = Path.home()
 GMSH_BIN = USER_DIR / "gmsh/bin/gmsh"
@@ -18,7 +17,8 @@ def main() -> None:
     gmsh_runner = GmshRunner(GMSH_BIN)
 
     # Find all .geo files in the current directory
-    geo_files = sorted(list((PROJ_ROOT / "data").glob("*.geo")))
+    script_dir = Path(__file__).resolve().parent
+    geo_files = sorted(list(script_dir.glob("*.geo")))
 
     if not geo_files:
         print("No .geo files found in the current directory.")

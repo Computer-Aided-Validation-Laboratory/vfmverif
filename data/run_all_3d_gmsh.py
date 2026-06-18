@@ -8,7 +8,6 @@ import time
 from pathlib import Path
 from pyvale.mooseherder import GmshRunner
 
-PROJ_ROOT = Path(__file__).resolve().parent.parent
 PARSE_ONLY = False
 USER_DIR = Path.home()
 GMSH_BIN = USER_DIR / "gmsh/bin/gmsh"
@@ -18,7 +17,8 @@ def main() -> None:
     gmsh_runner = GmshRunner(GMSH_BIN)
 
     # Find all 3D .geo files
-    geo_files = sorted(list((PROJ_ROOT / "data").glob("mesh3d_*.geo")))
+    script_dir = Path(__file__).resolve().parent
+    geo_files = sorted(list(script_dir.glob("mesh3d_*.geo")))
 
     if not geo_files:
         print("No 3D .geo files found in the data directory.")
