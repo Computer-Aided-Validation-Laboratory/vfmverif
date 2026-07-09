@@ -18,10 +18,10 @@ Geometry.VolumeLabels = 0;
 // Variables
 
 // Geometric variables
-plate_width = 25e-3;
-plate_height = 35e-3;
+plate_width = 25.0;
+plate_height = 35.0;
 plate_diff = plate_height-plate_width;
-plate_thick = 1e-3;
+plate_thick = 1.0;
 
 hole_rad = plate_width/8;
 hole_loc_x = 0.0;

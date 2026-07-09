@@ -91,9 +91,9 @@ def main() -> None:
 
     # Create the meshgrid in (Nx, Ny, Nz) order
     grid_pts = 101
-    plate_height = 35e-3
-    plate_width = 25e-3
-    plate_thick = 1e-3
+    plate_height = 35.0
+    plate_width = 25.0
+    plate_thick = 1.0
 
     x_vec = inner_vec_by_divs(plate_width/2,-plate_width/2,grid_pts)
     y_vec = (inner_vec_by_divs(plate_width/2,-plate_width/2,grid_pts)
@@ -159,9 +159,9 @@ def main() -> None:
             cmap="viridis",
         )
         fig.colorbar(mesh, ax=ax, label=name)
-        ax.set_xlabel("X (m)")
+        ax.set_xlabel("X (mm)")
         if idx == 0:
-            ax.set_ylabel("Y (m)")
+            ax.set_ylabel("Y (mm)")
         ax.set_title(f"{name} Slice at Final Time Step")
 
     plt.tight_layout()

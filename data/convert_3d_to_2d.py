@@ -43,9 +43,24 @@ def convert_file(file_path: Path) -> None:
         "[Variables]\n"
         "    [scalar_strain_zz]\n"
         "    []\n"
-        "[]\n\n"
+        "[]"
     )
-    content = variables_block + content
+    end_marker = (
+        "#** MOOSEHERDER VARIABLES - END\n"
+        "#-------------------------------------------------------"
+        "------------------"
+    )
+    if end_marker in content:
+        content = content.replace(
+            end_marker,
+            f"{end_marker}\n\n{variables_block}"
+        )
+    else:
+        end_marker_simple = "#** MOOSEHERDER VARIABLES - END"
+        content = content.replace(
+            end_marker_simple,
+            f"{end_marker_simple}\n\n{variables_block}"
+        )
 
     # 5. Remove bottom_z and top_z from BCs
     content = re.sub(r"\s*\[bottom_z\][\s\S]*?\[\]", "", content)

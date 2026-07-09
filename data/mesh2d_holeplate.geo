@@ -21,8 +21,8 @@ Geometry.VolumeLabels = 0;
 file_name = "mesh2d_holeplate.msh";
 
 // Geometric variables
-plate_width = 25.0e-3;
-plate_height = 35.0e-3; // Must be greater than plate width
+plate_width = 25.0;
+plate_height = 35.0; // Must be greater than plate width
 
 plate_diff = plate_height-plate_width;
 

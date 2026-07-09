@@ -1,7 +1,4 @@
-[Variables]
-    [scalar_strain_zz]
-    []
-[]
+
 
 #-------------------------------------------------------------------------
 # pyvale: gmsh,mechanical,transient
@@ -13,10 +10,15 @@
 !include common_het_geometry.i
 simName = notch2d_elas_het
 PRatio = 0.3      # -
-EModInf = 200e9         # Pa, modulus far from the bump
-PeakEMod = 240e9        # Pa, modulus at the bump centre
+EModInf = 200e3         # MPa, modulus far from the bump
+PeakEMod = 240e3        # MPa, modulus at the bump centre
 #** MOOSEHERDER VARIABLES - END
 #-------------------------------------------------------------------------
+
+[Variables]
+    [scalar_strain_zz]
+    []
+[]
 
 [GlobalParams]
     displacements = 'disp_x disp_y'
@@ -34,9 +36,8 @@ PeakEMod = 240e9        # Pa, modulus at the bump centre
         planar_formulation = WEAK_PLANE_STRESS
         incremental = true
         add_variables = true
-        material_output_family = LAGRANGE
-        material_output_order = FIRST
-        # generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy'
+        material_output_family = MONOMIAL
+        material_output_order = CONSTANT
         generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy stress_xx stress_yy stress_zz stress_xy'
     [] 
 []

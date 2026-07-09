@@ -19,24 +19,24 @@ Geometry.VolumeLabels = 0;
 // Variables
 
 // Geometric variables
-plate_width = 25.0e-3;
-plate_height = 35.0e-3; // Must be greater than plate width
-plate_thick = 1.0e-3;
+plate_width = 25.0;
+plate_height = 35.0; // Must be greater than plate width
+plate_thick = 1.0;
 
 plate_diff = plate_height-plate_width;
 
 // Notch variables
 notch_1_rad = plate_width/4;
 notch_1_loc_x = -plate_width/2;
-notch_1_loc_y = plate_height/2 + 5.0e-3;
+notch_1_loc_y = plate_height/2 + 5.0;
 
 notch_2_rad = plate_width/4;
 notch_2_loc_x = plate_width/2;
-notch_2_loc_y = plate_height/2 - 5.0e-3;
+notch_2_loc_y = plate_height/2 - 5.0;
 
 // Mesh variables
 mesh_ref = 2;
-mesh_size = 4.0e-3/mesh_ref;
+mesh_size = 4.0/mesh_ref;
 
 plate_thick_layers = 2;
 //file_name = Sprintf("mesh3d_notchplate_%g.msh", mesh_ref);

@@ -24,8 +24,8 @@ simName = hole3d_elas
         strain = SMALL
         incremental = true
         add_variables = true
-        material_output_family = LAGRANGE   # MONOMIAL, LAGRANGE
-        material_output_order = FIRST       # CONSTANT, FIRST, SECOND,
+        material_output_family = MONOMIAL
+        material_output_order = CONSTANT
         # generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy strain_yz strain_xz'
         generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy strain_yz strain_xz stress_xx stress_yy stress_zz stress_xy stress_yz stress_xz'
     []

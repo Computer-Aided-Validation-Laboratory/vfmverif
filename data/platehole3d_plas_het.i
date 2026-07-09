@@ -7,11 +7,11 @@
 !include common_load_time.i
 !include common_het_geometry.i
 simName = hole3d_plas_het
-EMod = 200e9       # Pa
+EMod = 200e3       # MPa
 PRatio = 0.3       # -
-HardMod = 1000e6   # Pa
-YieldInf = 200e6         # Pa, yield stress far from the bump
-PeakYield = 240e6        # Pa, yield stress at the bump centre
+HardMod = 1000   # MPa
+YieldInf = 200         # MPa, yield stress far from the bump
+PeakYield = 240        # MPa, yield stress at the bump centre
 #** MOOSEHERDER VARIABLES - END
 #-------------------------------------------------------------------------
 
@@ -31,10 +31,8 @@ PeakYield = 240e6        # Pa, yield stress at the bump centre
         add_variables = true
         use_automatic_differentiation = true
 
-        material_output_family = LAGRANGE
-        material_output_order = FIRST
-
-        # generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy strain_yz strain_xz plastic_strain_xx plastic_strain_yy plastic_strain_zz plastic_strain_xy plastic_strain_yz plastic_strain_xz'
+        material_output_family = MONOMIAL
+        material_output_order = CONSTANT
         generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy strain_yz strain_xz plastic_strain_xx plastic_strain_yy plastic_strain_zz plastic_strain_xy plastic_strain_yz plastic_strain_xz stress_xx stress_yy stress_zz stress_xy stress_yz stress_xz'
     []
 []

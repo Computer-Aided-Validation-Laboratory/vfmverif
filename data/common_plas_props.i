@@ -1,4 +1,4 @@
-EMod = 200e9       # Pa
+EMod = 200e3       # MPa
 PRatio = 0.3       # -
-Yield = 200e6      # Pa
-HardMod = 1000e6   # Pa
+Yield = 200      # MPa
+HardMod = 1000   # MPa

@@ -1,2 +1,2 @@
-EMod = 200e9       # Pa
+EMod = 200e3       # MPa
 PRatio = 0.3      # -

@@ -26,10 +26,8 @@ simName = hole3d_plas
         add_variables = true
         use_automatic_differentiation = true
 
-        material_output_family = LAGRANGE
-        material_output_order = FIRST
-
-        # generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy strain_yz strain_xz plastic_strain_xx plastic_strain_yy plastic_strain_zz plastic_strain_xy plastic_strain_yz plastic_strain_xz'
+        material_output_family = MONOMIAL
+        material_output_order = CONSTANT
         generate_output = 'vonmises_stress strain_xx strain_yy strain_zz strain_xy strain_yz strain_xz plastic_strain_xx plastic_strain_yy plastic_strain_zz plastic_strain_xy plastic_strain_yz plastic_strain_xz stress_xx stress_yy stress_zz stress_xy stress_yz stress_xz'
     []
 []

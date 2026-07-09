@@ -3,7 +3,7 @@ MOOSE Version:           git commit b85414d92b on 2025-11-25
 LibMesh Version:         910736a3a20aded528c3ba99371ce65980dc8e2c
 PETSc Version:           3.24.0
 SLEPc Version:           3.24.0
-Current Time:            Tue Jun 16 09:29:31 2026
+Current Time:            Wed Jul  8 21:05:00 2026
 Executable Timestamp:    Wed Nov 26 18:13:58 2025
 
 Input File(s):
@@ -27,30 +27,29 @@ Mesh:
   Mesh Dimension:          2
   Spatial Dimension:       2
   Nodes:                   
-    Total:                 6045
-    Local:                 3043
-    Min/Max/Avg:           3002/3043/3022
+    Total:                 6049
+    Local:                 3048
+    Min/Max/Avg:           3001/3048/3024
   Elems:                   
-    Total:                 2928
-    Local:                 1464
-    Min/Max/Avg:           1464/1464/1464
+    Total:                 2930
+    Local:                 1465
+    Min/Max/Avg:           1465/1465/1465
   Num Subdomains:          1
   Num Partitions:          2
   Partitioner:             metis
 
 Nonlinear System:
-  Num DOFs:                33916
-  Num Local DOFs:          17146
-  Variables:               { "vonmises_stress" "strain_xx" "strain_yy" "strain_zz" "strain_xy" ... "stress_xx" 
-                             "stress_yy" "stress_zz" "stress_xy" "scalar_strain_zz" } { "disp_x" "disp_y" 
-                             } 
+  Num DOFs:                13658
+  Num Local DOFs:          6888
+  Variables:               "scalar_strain_zz" { "disp_x" "disp_y" } 
   Finite Element Types:    "LAGRANGE" "LAGRANGE" 
   Approximation Orders:    "FIRST" "SECOND" 
 
 Auxiliary System:
-  Num DOFs:                2928
-  Num Local DOFs:          1464
-  Variables:               "effective_plastic_strain_out" 
+  Num DOFs:                41020
+  Num Local DOFs:          20510
+  Variables:               { "vonmises_stress" "strain_xx" "strain_yy" "strain_zz" "strain_xy" ... "stress_xx" 
+                             "stress_yy" "stress_zz" "stress_xy" "effective_plastic_strain_out" } 
   Finite Element Types:    "MONOMIAL" 
   Approximation Orders:    "CONSTANT" 
 
@@ -74,1496 +73,1306 @@ Postprocessor Values:
 
 Time Step 1, time = 1, dt = 1
  Skipping predictor this step
- 0 Nonlinear |R| = [32m6.846823e+06[39m
-      0 Linear |R| = [32m6.846823e+06[39m
-      1 Linear |R| = [32m9.454131e-08[39m
- 1 Nonlinear |R| = [32m1.688573e+06[39m
-      0 Linear |R| = [32m1.688573e+06[39m
-      1 Linear |R| = [32m4.005670e-07[39m
- 2 Nonlinear |R| = [32m1.217886e+06[39m
-      0 Linear |R| = [32m1.217886e+06[39m
-      1 Linear |R| = [32m4.535499e-07[39m
- 3 Nonlinear |R| = [32m1.078529e+06[39m
-      0 Linear |R| = [32m1.078529e+06[39m
-      1 Linear |R| = [32m4.067326e-07[39m
- 4 Nonlinear |R| = [32m8.933693e+05[39m
-      0 Linear |R| = [32m8.933693e+05[39m
-      1 Linear |R| = [32m3.031083e-07[39m
- 5 Nonlinear |R| = [33m8.725123e+05[39m
-      0 Linear |R| = [32m8.725123e+05[39m
-      1 Linear |R| = [32m2.732657e-07[39m
- 6 Nonlinear |R| = [33m8.474775e+05[39m
-      0 Linear |R| = [32m8.474775e+05[39m
-      1 Linear |R| = [32m2.008408e-07[39m
- 7 Nonlinear |R| = [33m8.062786e+05[39m
-      0 Linear |R| = [32m8.062786e+05[39m
-      1 Linear |R| = [32m5.547326e-08[39m
- 8 Nonlinear |R| = [33m8.010619e+05[39m
-      0 Linear |R| = [32m8.010619e+05[39m
-      1 Linear |R| = [32m2.918427e-07[39m
- 9 Nonlinear |R| = [33m7.827099e+05[39m
-      0 Linear |R| = [32m7.827099e+05[39m
-      1 Linear |R| = [32m2.432853e-07[39m
-10 Nonlinear |R| = [32m7.393475e+05[39m
-      0 Linear |R| = [32m7.393475e+05[39m
-      1 Linear |R| = [32m3.530742e-07[39m
-11 Nonlinear |R| = [32m6.445259e+05[39m
-      0 Linear |R| = [32m6.445259e+05[39m
-      1 Linear |R| = [32m2.318779e-07[39m
-12 Nonlinear |R| = [32m4.613405e+05[39m
-      0 Linear |R| = [32m4.613405e+05[39m
-      1 Linear |R| = [32m9.881759e-08[39m
-13 Nonlinear |R| = [33m4.498697e+05[39m
-      0 Linear |R| = [32m4.498697e+05[39m
-      1 Linear |R| = [32m7.721649e-08[39m
-14 Nonlinear |R| = [33m4.381244e+05[39m
-      0 Linear |R| = [32m4.381244e+05[39m
-      1 Linear |R| = [32m6.412818e-08[39m
-15 Nonlinear |R| = [33m4.230116e+05[39m
-      0 Linear |R| = [32m4.230116e+05[39m
-      1 Linear |R| = [32m3.772958e-08[39m
-16 Nonlinear |R| = [32m4.008885e+05[39m
-      0 Linear |R| = [32m4.008885e+05[39m
-      1 Linear |R| = [32m1.740240e-08[39m
-17 Nonlinear |R| = [32m3.632338e+05[39m
-      0 Linear |R| = [32m3.632338e+05[39m
-      1 Linear |R| = [32m3.832179e-09[39m
-18 Nonlinear |R| = [33m3.454150e+05[39m
-      0 Linear |R| = [32m3.454150e+05[39m
-      1 Linear |R| = [32m1.764468e-09[39m
-19 Nonlinear |R| = [32m2.481057e+05[39m
-      0 Linear |R| = [32m2.481057e+05[39m
-      1 Linear |R| = [32m1.205644e-09[39m
-20 Nonlinear |R| = [32m2.216957e+05[39m
-      0 Linear |R| = [32m2.216957e+05[39m
-      1 Linear |R| = [32m1.021398e-09[39m
-21 Nonlinear |R| = [32m1.914483e+05[39m
-      0 Linear |R| = [32m1.914483e+05[39m
-      1 Linear |R| = [32m8.058195e-10[39m
-22 Nonlinear |R| = [32m1.681343e+05[39m
-      0 Linear |R| = [32m1.681343e+05[39m
-      1 Linear |R| = [32m7.225960e-10[39m
-23 Nonlinear |R| = [32m1.531132e+05[39m
-      0 Linear |R| = [32m1.531132e+05[39m
-      1 Linear |R| = [32m7.084339e-10[39m
-24 Nonlinear |R| = [33m1.502259e+05[39m
-      0 Linear |R| = [32m1.502259e+05[39m
-      1 Linear |R| = [32m6.808959e-10[39m
-25 Nonlinear |R| = [32m4.503029e+03[39m
-      0 Linear |R| = [32m4.503029e+03[39m
-      1 Linear |R| = [32m1.427592e-11[39m
-26 Nonlinear |R| = [32m1.804398e+00[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 26
+ 0 Nonlinear |R| = [32m7.109856e+03[39m
+      0 Linear |R| = [32m7.109856e+03[39m
+      1 Linear |R| = [32m9.070917e-11[39m
+ 1 Nonlinear |R| = [32m1.724671e+03[39m
+      0 Linear |R| = [32m1.724671e+03[39m
+      1 Linear |R| = [32m3.787513e-10[39m
+ 2 Nonlinear |R| = [32m1.460284e+03[39m
+      0 Linear |R| = [32m1.460284e+03[39m
+      1 Linear |R| = [32m4.140982e-10[39m
+ 3 Nonlinear |R| = [32m1.184831e+03[39m
+      0 Linear |R| = [32m1.184831e+03[39m
+      1 Linear |R| = [32m3.197245e-10[39m
+ 4 Nonlinear |R| = [32m1.016288e+03[39m
+      0 Linear |R| = [32m1.016288e+03[39m
+      1 Linear |R| = [32m3.514212e-10[39m
+ 5 Nonlinear |R| = [32m7.676314e+02[39m
+      0 Linear |R| = [32m7.676314e+02[39m
+      1 Linear |R| = [32m3.779086e-10[39m
+ 6 Nonlinear |R| = [32m6.453541e+02[39m
+      0 Linear |R| = [32m6.453541e+02[39m
+      1 Linear |R| = [32m2.457578e-10[39m
+ 7 Nonlinear |R| = [33m6.368427e+02[39m
+      0 Linear |R| = [32m6.368427e+02[39m
+      1 Linear |R| = [32m2.200165e-10[39m
+ 8 Nonlinear |R| = [33m6.301351e+02[39m
+      0 Linear |R| = [32m6.301351e+02[39m
+      1 Linear |R| = [32m1.996094e-10[39m
+ 9 Nonlinear |R| = [33m6.233879e+02[39m
+      0 Linear |R| = [32m6.233879e+02[39m
+      1 Linear |R| = [32m1.710989e-10[39m
+10 Nonlinear |R| = [33m6.144109e+02[39m
+      0 Linear |R| = [32m6.144109e+02[39m
+      1 Linear |R| = [32m1.164996e-10[39m
+11 Nonlinear |R| = [33m5.933117e+02[39m
+      0 Linear |R| = [32m5.933117e+02[39m
+      1 Linear |R| = [32m5.107264e-11[39m
+12 Nonlinear |R| = [32m5.590226e+02[39m
+      0 Linear |R| = [32m5.590226e+02[39m
+      1 Linear |R| = [32m1.139167e-11[39m
+13 Nonlinear |R| = [32m4.933033e+02[39m
+      0 Linear |R| = [32m4.933033e+02[39m
+      1 Linear |R| = [32m2.659231e-12[39m
+14 Nonlinear |R| = [32m2.415065e+02[39m
+      0 Linear |R| = [32m2.415065e+02[39m
+      1 Linear |R| = [32m8.093372e-13[39m
+15 Nonlinear |R| = [32m1.516971e-01[39m
+      0 Linear |R| = [32m1.516971e-01[39m
+      1 Linear |R| = [32m4.233853e-16[39m
+16 Nonlinear |R| = [32m9.297721e-09[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 16
 Currently Executing
-  Finished Solving                                                                       [[33m 25.47 s[39m] [[33m  302 MB[39m]
+  Finished Solving                                                                       [[33m 59.71 s[39m] [[33m  261 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m1.314388e+00[39m
-  stress_yy: [33m7.123761e-01[39m
-  stress_zz: [33m8.136368e-01[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 2, time = 1.5, dt = 0.5
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m8.639376e+00[39m
-      0 Linear |R| = [32m8.639376e+00[39m
-      1 Linear |R| = [32m2.907546e-12[39m
- 1 Nonlinear |R| = [32m2.838584e-02[39m
-      0 Linear |R| = [32m2.838584e-02[39m
-      1 Linear |R| = [32m2.209067e-16[39m
- 2 Nonlinear |R| = [32m1.543919e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+ 0 Nonlinear |R| = [32m1.060673e-02[39m
+      0 Linear |R| = [32m1.060673e-02[39m
+      1 Linear |R| = [32m2.775514e-15[39m
+ 1 Nonlinear |R| = [32m2.406701e-09[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  disp_x: [33m1.010448e-06[39m
-  disp_y: [33m1.167339e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 3, time = 2.1, dt = 0.6
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m7.533901e+00[39m
-      0 Linear |R| = [32m7.533901e+00[39m
-      1 Linear |R| = [32m2.526442e-12[39m
- 1 Nonlinear |R| = [32m2.496635e-02[39m
-      0 Linear |R| = [32m2.496635e-02[39m
-      1 Linear |R| = [32m1.751786e-17[39m
- 2 Nonlinear |R| = [32m1.508425e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+ 0 Nonlinear |R| = [32m9.330029e-03[39m
+      0 Linear |R| = [32m9.330029e-03[39m
+      1 Linear |R| = [32m2.419955e-15[39m
+ 1 Nonlinear |R| = [32m2.379786e-09[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  disp_x: [33m9.823957e-07[39m
-  disp_y: [33m1.144659e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 4, time = 2.82, dt = 0.72
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.038701e+01[39m
-      0 Linear |R| = [32m1.038701e+01[39m
-      1 Linear |R| = [32m3.756550e-12[39m
- 1 Nonlinear |R| = [32m3.593662e-02[39m
-      0 Linear |R| = [32m3.593662e-02[39m
-      1 Linear |R| = [32m3.245143e-17[39m
- 2 Nonlinear |R| = [32m1.554055e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+ 0 Nonlinear |R| = [32m1.343058e-02[39m
+      0 Linear |R| = [32m1.343058e-02[39m
+      1 Linear |R| = [32m3.555067e-15[39m
+ 1 Nonlinear |R| = [32m2.450887e-09[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  disp_x: [33m9.781635e-07[39m
-  disp_y: [33m1.207594e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 5, time = 3.684, dt = 0.864
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.494996e+01[39m
-      0 Linear |R| = [32m1.494996e+01[39m
-      1 Linear |R| = [32m5.345103e-12[39m
- 1 Nonlinear |R| = [32m5.172245e-02[39m
-      0 Linear |R| = [32m5.172245e-02[39m
-      1 Linear |R| = [32m1.722967e-16[39m
- 2 Nonlinear |R| = [32m1.521679e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+ 0 Nonlinear |R| = [32m1.933200e-02[39m
+      0 Linear |R| = [32m1.933200e-02[39m
+      1 Linear |R| = [32m5.083369e-15[39m
+ 1 Nonlinear |R| = [32m2.595763e-09[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 1
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  disp_x: [33m9.815360e-07[39m
-  disp_y: [33m1.162794e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 6, time = 4.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m3.124418e+03[39m
-      0 Linear |R| = [32m3.124418e+03[39m
-      1 Linear |R| = [32m2.788977e-11[39m
- 1 Nonlinear |R| = [32m2.251443e+02[39m
-      0 Linear |R| = [32m2.251443e+02[39m
-      1 Linear |R| = [32m1.152174e-12[39m
- 2 Nonlinear |R| = [32m8.638775e-02[39m
-      0 Linear |R| = [32m8.638775e-02[39m
-      1 Linear |R| = [32m2.083281e-16[39m
- 3 Nonlinear |R| = [32m9.300506e-06[39m
+ 0 Nonlinear |R| = [32m3.105261e+00[39m
+      0 Linear |R| = [32m3.105261e+00[39m
+      1 Linear |R| = [32m2.950002e-14[39m
+ 1 Nonlinear |R| = [32m2.025176e-01[39m
+      0 Linear |R| = [32m2.025176e-01[39m
+      1 Linear |R| = [32m9.020695e-16[39m
+ 2 Nonlinear |R| = [32m3.363290e-05[39m
+      0 Linear |R| = [32m3.363290e-05[39m
+      1 Linear |R| = [32m7.581947e-20[39m
+ 3 Nonlinear |R| = [32m1.861160e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m5.295992e-06[39m
-  stress_yy: [33m4.115317e-06[39m
-  stress_zz: [33m3.564799e-06[39m
-  stress_xy: [33m3.816148e-06[39m
+  Finished Solving                                                                       [[33m  8.78 s[39m] [[33m  262 MB[39m]
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 7, time = 5.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.081374e+04[39m
-      0 Linear |R| = [32m2.081374e+04[39m
-      1 Linear |R| = [32m1.000655e-09[39m
- 1 Nonlinear |R| = [32m7.335128e+03[39m
-      0 Linear |R| = [32m7.335128e+03[39m
-      1 Linear |R| = [32m9.320070e-11[39m
- 2 Nonlinear |R| = [32m5.728185e+02[39m
-      0 Linear |R| = [32m5.728185e+02[39m
-      1 Linear |R| = [32m2.946527e-12[39m
- 3 Nonlinear |R| = [32m2.081770e+00[39m
-      0 Linear |R| = [32m2.081770e+00[39m
-      1 Linear |R| = [32m5.084201e-14[39m
- 4 Nonlinear |R| = [32m5.027673e-04[39m
+ 0 Nonlinear |R| = [32m2.169420e+01[39m
+      0 Linear |R| = [32m2.169420e+01[39m
+      1 Linear |R| = [32m9.584954e-13[39m
+ 1 Nonlinear |R| = [32m7.483522e+00[39m
+      0 Linear |R| = [32m7.483522e+00[39m
+      1 Linear |R| = [32m1.050343e-13[39m
+ 2 Nonlinear |R| = [32m5.963051e-01[39m
+      0 Linear |R| = [32m5.963051e-01[39m
+      1 Linear |R| = [32m3.042763e-15[39m
+ 3 Nonlinear |R| = [32m2.078826e-03[39m
+      0 Linear |R| = [32m2.078826e-03[39m
+      1 Linear |R| = [32m5.269251e-17[39m
+ 4 Nonlinear |R| = [32m2.328437e-08[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+  Finished Solving                                                                       [[33m 12.56 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
 
 Outlier Variable Residual Norms:
-  vonmises_stress: [33m3.171867e-04[39m
-  stress_xx: [33m2.226062e-04[39m
-  stress_yy: [33m2.692911e-04[39m
+  disp_x: [31m2.182633e-08[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 8, time = 6.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.865458e+04[39m
-      0 Linear |R| = [32m1.865458e+04[39m
-      1 Linear |R| = [32m2.056633e-09[39m
- 1 Nonlinear |R| = [32m1.149895e+04[39m
-      0 Linear |R| = [32m1.149895e+04[39m
-      1 Linear |R| = [32m1.302336e-09[39m
- 2 Nonlinear |R| = [32m2.768093e+03[39m
-      0 Linear |R| = [32m2.768093e+03[39m
-      1 Linear |R| = [32m4.914423e-11[39m
- 3 Nonlinear |R| = [32m1.365400e+02[39m
-      0 Linear |R| = [32m1.365400e+02[39m
-      1 Linear |R| = [32m1.325999e-12[39m
- 4 Nonlinear |R| = [32m4.893048e+00[39m
-      0 Linear |R| = [32m4.893048e+00[39m
-      1 Linear |R| = [32m2.365542e-14[39m
- 5 Nonlinear |R| = [32m1.261928e-03[39m
+ 0 Nonlinear |R| = [32m2.194493e+01[39m
+      0 Linear |R| = [32m2.194493e+01[39m
+      1 Linear |R| = [32m2.030915e-12[39m
+ 1 Nonlinear |R| = [33m2.092496e+01[39m
+      0 Linear |R| = [32m2.092496e+01[39m
+      1 Linear |R| = [32m2.870777e-13[39m
+ 2 Nonlinear |R| = [32m2.096754e+00[39m
+      0 Linear |R| = [32m2.096754e+00[39m
+      1 Linear |R| = [32m1.318709e-14[39m
+ 3 Nonlinear |R| = [32m2.148690e-01[39m
+      0 Linear |R| = [32m2.148690e-01[39m
+      1 Linear |R| = [32m1.364479e-15[39m
+ 4 Nonlinear |R| = [32m1.169619e-04[39m
+      0 Linear |R| = [32m1.169619e-04[39m
+      1 Linear |R| = [32m4.484448e-19[39m
+ 5 Nonlinear |R| = [32m2.135232e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+  Finished Solving                                                                       [[33m 14.23 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m8.472114e-04[39m
-  stress_yy: [33m6.082534e-04[39m
-  stress_zz: [33m4.711567e-04[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 9, time = 7.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.865425e+04[39m
-      0 Linear |R| = [32m1.865425e+04[39m
-      1 Linear |R| = [32m2.461236e-09[39m
- 1 Nonlinear |R| = [32m1.640602e+04[39m
-      0 Linear |R| = [32m1.640602e+04[39m
-      1 Linear |R| = [32m2.384116e-09[39m
- 2 Nonlinear |R| = [32m1.171611e+04[39m
-      0 Linear |R| = [32m1.171611e+04[39m
-      1 Linear |R| = [32m1.660648e-09[39m
- 3 Nonlinear |R| = [32m3.237465e+03[39m
-      0 Linear |R| = [32m3.237465e+03[39m
-      1 Linear |R| = [32m9.197873e-11[39m
- 4 Nonlinear |R| = [32m6.066095e+02[39m
-      0 Linear |R| = [32m6.066095e+02[39m
-      1 Linear |R| = [32m2.906304e-12[39m
- 5 Nonlinear |R| = [32m4.058456e-01[39m
-      0 Linear |R| = [32m4.058456e-01[39m
-      1 Linear |R| = [32m1.119199e-15[39m
- 6 Nonlinear |R| = [32m5.452479e-05[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
-  Finished Solving                                                                       [[33m  5.64 s[39m] [[33m  307 MB[39m]
+ 0 Nonlinear |R| = [32m2.468739e+01[39m
+      0 Linear |R| = [32m2.468739e+01[39m
+      1 Linear |R| = [32m2.381389e-12[39m
+ 1 Nonlinear |R| = [32m2.077894e+01[39m
+      0 Linear |R| = [32m2.077894e+01[39m
+      1 Linear |R| = [32m2.212979e-12[39m
+ 2 Nonlinear |R| = [32m1.096504e+01[39m
+      0 Linear |R| = [32m1.096504e+01[39m
+      1 Linear |R| = [32m1.982406e-13[39m
+ 3 Nonlinear |R| = [32m1.027127e+00[39m
+      0 Linear |R| = [32m1.027127e+00[39m
+      1 Linear |R| = [32m7.708919e-15[39m
+ 4 Nonlinear |R| = [32m6.115946e-02[39m
+      0 Linear |R| = [32m6.115946e-02[39m
+      1 Linear |R| = [32m3.643911e-16[39m
+ 5 Nonlinear |R| = [32m3.256912e-06[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m2.310341e-05[39m
-  stress_xx: [33m2.700700e-05[39m
-  stress_yy: [33m2.305621e-05[39m
-  stress_zz: [33m3.090193e-05[39m
+  Finished Solving                                                                       [[33m 14.17 s[39m] [[33m  262 MB[39m]
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 10, time = 8.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.842475e+04[39m
-      0 Linear |R| = [32m1.842475e+04[39m
-      1 Linear |R| = [32m2.453701e-09[39m
- 1 Nonlinear |R| = [32m1.648800e+04[39m
-      0 Linear |R| = [32m1.648800e+04[39m
-      1 Linear |R| = [32m2.449608e-09[39m
- 2 Nonlinear |R| = [32m1.236908e+04[39m
-      0 Linear |R| = [32m1.236908e+04[39m
-      1 Linear |R| = [32m1.858507e-09[39m
- 3 Nonlinear |R| = [32m7.260714e+03[39m
-      0 Linear |R| = [32m7.260714e+03[39m
-      1 Linear |R| = [32m1.046151e-09[39m
- 4 Nonlinear |R| = [32m3.055156e+03[39m
-      0 Linear |R| = [32m3.055156e+03[39m
-      1 Linear |R| = [32m4.418995e-11[39m
- 5 Nonlinear |R| = [32m2.867810e+02[39m
-      0 Linear |R| = [32m2.867810e+02[39m
-      1 Linear |R| = [32m1.004894e-12[39m
- 6 Nonlinear |R| = [32m1.234876e-01[39m
-      0 Linear |R| = [32m1.234876e-01[39m
-      1 Linear |R| = [32m8.158958e-16[39m
- 7 Nonlinear |R| = [32m1.185184e-05[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
-  Finished Solving                                                                       [[33m  6.56 s[39m] [[33m  307 MB[39m]
+ 0 Nonlinear |R| = [32m2.822350e+01[39m
+      0 Linear |R| = [32m2.822350e+01[39m
+      1 Linear |R| = [32m2.405421e-12[39m
+ 1 Nonlinear |R| = [32m2.533986e+01[39m
+      0 Linear |R| = [32m2.533986e+01[39m
+      1 Linear |R| = [32m2.441118e-12[39m
+ 2 Nonlinear |R| = [33m2.409083e+01[39m
+      0 Linear |R| = [32m2.409083e+01[39m
+      1 Linear |R| = [32m2.731805e-13[39m
+ 3 Nonlinear |R| = [32m3.802088e+00[39m
+      0 Linear |R| = [32m3.802088e+00[39m
+      1 Linear |R| = [32m3.670687e-14[39m
+ 4 Nonlinear |R| = [32m3.186817e-01[39m
+      0 Linear |R| = [32m3.186817e-01[39m
+      1 Linear |R| = [32m8.351762e-16[39m
+ 5 Nonlinear |R| = [32m6.895496e-03[39m
+      0 Linear |R| = [32m6.895496e-03[39m
+      1 Linear |R| = [32m3.538035e-17[39m
+ 6 Nonlinear |R| = [32m2.336407e-07[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+  Finished Solving                                                                       [[33m 25.09 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m4.252103e-06[39m
-  stress_xx: [33m6.665278e-06[39m
-  stress_yy: [33m5.417727e-06[39m
-  stress_xy: [33m5.364463e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 11, time = 9.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.698495e+04[39m
-      0 Linear |R| = [32m1.698495e+04[39m
-      1 Linear |R| = [32m2.571053e-09[39m
- 1 Nonlinear |R| = [32m1.511078e+04[39m
-      0 Linear |R| = [32m1.511078e+04[39m
-      1 Linear |R| = [32m2.390074e-09[39m
- 2 Nonlinear |R| = [32m1.164562e+04[39m
-      0 Linear |R| = [32m1.164562e+04[39m
-      1 Linear |R| = [32m1.960164e-09[39m
- 3 Nonlinear |R| = [32m1.026282e+04[39m
-      0 Linear |R| = [32m1.026282e+04[39m
-      1 Linear |R| = [32m5.737773e-11[39m
- 4 Nonlinear |R| = [32m6.246711e+02[39m
-      0 Linear |R| = [32m6.246711e+02[39m
-      1 Linear |R| = [32m3.521199e-12[39m
- 5 Nonlinear |R| = [32m1.044390e+02[39m
-      0 Linear |R| = [32m1.044390e+02[39m
-      1 Linear |R| = [32m3.392565e-13[39m
- 6 Nonlinear |R| = [32m3.371866e-02[39m
-      0 Linear |R| = [32m3.371866e-02[39m
-      1 Linear |R| = [32m1.820806e-16[39m
- 7 Nonlinear |R| = [32m6.163849e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
-  Finished Solving                                                                       [[33m  6.46 s[39m] [[33m  307 MB[39m]
+ 0 Nonlinear |R| = [32m3.199192e+01[39m
+      0 Linear |R| = [32m3.199192e+01[39m
+      1 Linear |R| = [32m2.513135e-12[39m
+ 1 Nonlinear |R| = [32m2.570775e+01[39m
+      0 Linear |R| = [32m2.570775e+01[39m
+      1 Linear |R| = [32m2.112862e-12[39m
+ 2 Nonlinear |R| = [32m1.572043e+01[39m
+      0 Linear |R| = [32m1.572043e+01[39m
+      1 Linear |R| = [32m7.206821e-14[39m
+ 3 Nonlinear |R| = [32m9.995410e-01[39m
+      0 Linear |R| = [32m9.995410e-01[39m
+      1 Linear |R| = [32m1.001487e-14[39m
+ 4 Nonlinear |R| = [32m1.176091e-01[39m
+      0 Linear |R| = [32m1.176091e-01[39m
+      1 Linear |R| = [32m3.575926e-16[39m
+ 5 Nonlinear |R| = [32m2.167329e-05[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+  Finished Solving                                                                       [[33m 21.44 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m4.184568e-06[39m
-  stress_yy: [33m2.650572e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 12, time = 10.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.031579e+04[39m
-      0 Linear |R| = [32m2.031579e+04[39m
-      1 Linear |R| = [32m4.890804e-09[39m
- 1 Nonlinear |R| = [32m1.698027e+04[39m
-      0 Linear |R| = [32m1.698027e+04[39m
-      1 Linear |R| = [32m4.153719e-09[39m
- 2 Nonlinear |R| = [32m1.121732e+04[39m
-      0 Linear |R| = [32m1.121732e+04[39m
-      1 Linear |R| = [32m2.928055e-09[39m
- 3 Nonlinear |R| = [32m9.287001e+03[39m
-      0 Linear |R| = [32m9.287001e+03[39m
-      1 Linear |R| = [32m2.206354e-10[39m
- 4 Nonlinear |R| = [32m2.430497e+03[39m
-      0 Linear |R| = [32m2.430497e+03[39m
-      1 Linear |R| = [32m3.349943e-11[39m
- 5 Nonlinear |R| = [32m2.785311e+02[39m
-      0 Linear |R| = [32m2.785311e+02[39m
-      1 Linear |R| = [32m1.559944e-12[39m
- 6 Nonlinear |R| = [32m2.098697e-01[39m
-      0 Linear |R| = [32m2.098697e-01[39m
-      1 Linear |R| = [32m8.537110e-16[39m
- 7 Nonlinear |R| = [32m4.504778e-05[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 7
-  Finished Solving                                                                       [[33m  6.50 s[39m] [[33m  307 MB[39m]
+ 0 Nonlinear |R| = [32m4.250869e+01[39m
+      0 Linear |R| = [32m4.250869e+01[39m
+      1 Linear |R| = [32m4.704733e-12[39m
+ 1 Nonlinear |R| = [32m2.990979e+01[39m
+      0 Linear |R| = [32m2.990979e+01[39m
+      1 Linear |R| = [32m3.034276e-12[39m
+ 2 Nonlinear |R| = [32m1.229350e+01[39m
+      0 Linear |R| = [32m1.229350e+01[39m
+      1 Linear |R| = [32m3.780766e-13[39m
+ 3 Nonlinear |R| = [32m5.265447e+00[39m
+      0 Linear |R| = [32m5.265447e+00[39m
+      1 Linear |R| = [32m9.149066e-14[39m
+ 4 Nonlinear |R| = [32m7.169435e-01[39m
+      0 Linear |R| = [32m7.169435e-01[39m
+      1 Linear |R| = [32m7.953960e-15[39m
+ 5 Nonlinear |R| = [32m2.352652e-03[39m
+      0 Linear |R| = [32m2.352652e-03[39m
+      1 Linear |R| = [32m2.511211e-17[39m
+ 6 Nonlinear |R| = [32m3.668255e-08[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
+  Finished Solving                                                                       [[33m 24.69 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
 
 Outlier Variable Residual Norms:
-  stress_xx: [33m2.885969e-05[39m
-  stress_yy: [33m1.976186e-05[39m
-  stress_zz: [33m2.011573e-05[39m
+  disp_y: [33m3.013220e-08[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 13, time = 11.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.781489e+04[39m
-      0 Linear |R| = [32m1.781489e+04[39m
-      1 Linear |R| = [32m2.824167e-09[39m
- 1 Nonlinear |R| = [32m1.539616e+04[39m
-      0 Linear |R| = [32m1.539616e+04[39m
-      1 Linear |R| = [32m2.285441e-10[39m
- 2 Nonlinear |R| = [32m3.545661e+03[39m
-      0 Linear |R| = [32m3.545661e+03[39m
-      1 Linear |R| = [32m4.902579e-11[39m
- 3 Nonlinear |R| = [32m7.610577e+02[39m
-      0 Linear |R| = [32m7.610577e+02[39m
-      1 Linear |R| = [32m1.114304e-11[39m
- 4 Nonlinear |R| = [32m7.910444e+01[39m
-      0 Linear |R| = [32m7.910444e+01[39m
-      1 Linear |R| = [32m8.598316e-13[39m
- 5 Nonlinear |R| = [32m6.429624e-02[39m
-      0 Linear |R| = [32m6.429624e-02[39m
-      1 Linear |R| = [32m6.030772e-16[39m
- 6 Nonlinear |R| = [32m1.263106e-05[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 6
-  Finished Solving                                                                       [[33m  5.47 s[39m] [[33m  307 MB[39m]
+ 0 Nonlinear |R| = [32m2.124666e+01[39m
+      0 Linear |R| = [32m2.124666e+01[39m
+      1 Linear |R| = [32m2.794356e-12[39m
+ 1 Nonlinear |R| = [32m1.597427e+01[39m
+      0 Linear |R| = [32m1.597427e+01[39m
+      1 Linear |R| = [32m1.974069e-13[39m
+ 2 Nonlinear |R| = [32m3.473313e+00[39m
+      0 Linear |R| = [32m3.473313e+00[39m
+      1 Linear |R| = [32m4.794543e-14[39m
+ 3 Nonlinear |R| = [32m7.139126e-01[39m
+      0 Linear |R| = [32m7.139126e-01[39m
+      1 Linear |R| = [32m9.415561e-15[39m
+ 4 Nonlinear |R| = [32m3.352122e-02[39m
+      0 Linear |R| = [32m3.352122e-02[39m
+      1 Linear |R| = [32m4.047767e-16[39m
+ 5 Nonlinear |R| = [32m1.289033e-05[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+  Finished Solving                                                                       [[33m 20.28 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
 
 Outlier Variable Residual Norms:
-  stress_xx: [33m7.759492e-06[39m
-  stress_yy: [33m5.508140e-06[39m
-  stress_xy: [33m5.426670e-06[39m
+  disp_y: [33m1.130662e-05[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 14, time = 12.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m1.159804e+04[39m
-      0 Linear |R| = [32m1.159804e+04[39m
-      1 Linear |R| = [32m4.092863e-10[39m
- 1 Nonlinear |R| = [32m4.540519e+03[39m
-      0 Linear |R| = [32m4.540519e+03[39m
-      1 Linear |R| = [32m6.703052e-11[39m
- 2 Nonlinear |R| = [32m7.512736e+02[39m
-      0 Linear |R| = [32m7.512736e+02[39m
-      1 Linear |R| = [32m1.483312e-11[39m
- 3 Nonlinear |R| = [32m2.794217e+01[39m
-      0 Linear |R| = [32m2.794217e+01[39m
-      1 Linear |R| = [32m1.010275e-13[39m
- 4 Nonlinear |R| = [32m6.959668e-01[39m
-      0 Linear |R| = [32m6.959668e-01[39m
-      1 Linear |R| = [32m3.978430e-15[39m
- 5 Nonlinear |R| = [32m2.632504e-04[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 5
+ 0 Nonlinear |R| = [32m1.211136e+01[39m
+      0 Linear |R| = [32m1.211136e+01[39m
+      1 Linear |R| = [32m4.041096e-13[39m
+ 1 Nonlinear |R| = [32m4.563552e+00[39m
+      0 Linear |R| = [32m4.563552e+00[39m
+      1 Linear |R| = [32m7.440855e-14[39m
+ 2 Nonlinear |R| = [32m7.551331e-01[39m
+      0 Linear |R| = [32m7.551331e-01[39m
+      1 Linear |R| = [32m1.335816e-14[39m
+ 3 Nonlinear |R| = [32m2.897406e-02[39m
+      0 Linear |R| = [32m2.897406e-02[39m
+      1 Linear |R| = [32m9.298118e-17[39m
+ 4 Nonlinear |R| = [32m2.698095e-06[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
 [32m Solve Converged![39m
+  Finished Solving                                                                       [[33m 14.86 s[39m] [[33m  262 MB[39m]
 
 Outlier Variable Residual Norms:
-  vonmises_stress: [33m1.732316e-04[39m
-  stress_xx: [33m1.094131e-04[39m
-  stress_yy: [33m1.090246e-04[39m
-  stress_zz: [33m1.102011e-04[39m
+  disp_y: [33m2.227908e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |   0.000000e+00 |
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 15, time = 13.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m8.118357e+03[39m
-      0 Linear |R| = [32m8.118357e+03[39m
-      1 Linear |R| = [32m2.094219e-10[39m
- 1 Nonlinear |R| = [32m1.658137e+03[39m
-      0 Linear |R| = [32m1.658137e+03[39m
-      1 Linear |R| = [32m3.127282e-11[39m
- 2 Nonlinear |R| = [32m4.600233e+01[39m
-      0 Linear |R| = [32m4.600233e+01[39m
-      1 Linear |R| = [32m4.121301e-13[39m
- 3 Nonlinear |R| = [32m3.307827e+00[39m
-      0 Linear |R| = [32m3.307827e+00[39m
-      1 Linear |R| = [32m3.895196e-14[39m
- 4 Nonlinear |R| = [32m8.087836e-04[39m
+ 0 Nonlinear |R| = [32m8.396563e+00[39m
+      0 Linear |R| = [32m8.396563e+00[39m
+      1 Linear |R| = [32m2.029253e-13[39m
+ 1 Nonlinear |R| = [32m1.670303e+00[39m
+      0 Linear |R| = [32m1.670303e+00[39m
+      1 Linear |R| = [32m2.718352e-14[39m
+ 2 Nonlinear |R| = [32m4.612890e-02[39m
+      0 Linear |R| = [32m4.612890e-02[39m
+      1 Linear |R| = [32m4.122527e-16[39m
+ 3 Nonlinear |R| = [32m2.827308e-03[39m
+      0 Linear |R| = [32m2.827308e-03[39m
+      1 Linear |R| = [32m9.449304e-17[39m
+ 4 Nonlinear |R| = [32m2.026980e-08[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+  Finished Solving                                                                       [[33m 11.17 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
 
 Outlier Variable Residual Norms:
-  vonmises_stress: [33m5.569809e-04[39m
-  stress_yy: [33m3.371184e-04[39m
-  stress_zz: [33m3.703257e-04[39m
+  disp_y: [33m1.744717e-08[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.000000e+00 |   3.125000e-06 |   2.904052e+05 |   4.527460e+07 |
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
+|   1.000000e+00 |   3.125000e-03 |   2.904010e+02 |   4.331120e+01 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 16, time = 14.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m6.589764e+03[39m
-      0 Linear |R| = [32m6.589764e+03[39m
-      1 Linear |R| = [32m1.584359e-10[39m
- 1 Nonlinear |R| = [32m1.147021e+03[39m
-      0 Linear |R| = [32m1.147021e+03[39m
-      1 Linear |R| = [32m1.002131e-11[39m
- 2 Nonlinear |R| = [32m5.516997e+01[39m
-      0 Linear |R| = [32m5.516997e+01[39m
-      1 Linear |R| = [32m2.402412e-13[39m
- 3 Nonlinear |R| = [32m1.309961e-02[39m
-      0 Linear |R| = [32m1.309961e-02[39m
-      1 Linear |R| = [32m3.956320e-17[39m
- 4 Nonlinear |R| = [32m1.728520e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+ 0 Nonlinear |R| = [32m6.792171e+00[39m
+      0 Linear |R| = [32m6.792171e+00[39m
+      1 Linear |R| = [32m1.547413e-13[39m
+ 1 Nonlinear |R| = [32m1.151200e+00[39m
+      0 Linear |R| = [32m1.151200e+00[39m
+      1 Linear |R| = [32m9.901138e-15[39m
+ 2 Nonlinear |R| = [32m4.993737e-02[39m
+      0 Linear |R| = [32m4.993737e-02[39m
+      1 Linear |R| = [32m2.206428e-16[39m
+ 3 Nonlinear |R| = [32m4.518167e-06[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  disp_x: [33m9.786084e-07[39m
-  disp_y: [33m1.129918e-06[39m
+  Finished Solving                                                                       [[33m  8.76 s[39m] [[33m  262 MB[39m]
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.500000e+00 |   4.687500e-06 |   4.356007e+05 |   6.790487e+07 |
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
+|   1.500000e+00 |   4.687500e-03 |   4.355943e+02 |   6.496237e+01 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 17, time = 15.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m6.015926e+03[39m
-      0 Linear |R| = [32m6.015926e+03[39m
-      1 Linear |R| = [32m1.463139e-10[39m
- 1 Nonlinear |R| = [32m8.757779e+02[39m
-      0 Linear |R| = [32m8.757779e+02[39m
-      1 Linear |R| = [32m1.744598e-11[39m
- 2 Nonlinear |R| = [32m7.666474e+00[39m
-      0 Linear |R| = [32m7.666474e+00[39m
-      1 Linear |R| = [32m8.956558e-14[39m
- 3 Nonlinear |R| = [32m1.763634e-03[39m
+ 0 Nonlinear |R| = [32m6.204999e+00[39m
+      0 Linear |R| = [32m6.204999e+00[39m
+      1 Linear |R| = [32m1.361424e-13[39m
+ 1 Nonlinear |R| = [32m8.722215e-01[39m
+      0 Linear |R| = [32m8.722215e-01[39m
+      1 Linear |R| = [32m1.563696e-14[39m
+ 2 Nonlinear |R| = [32m7.245951e-03[39m
+      0 Linear |R| = [32m7.245951e-03[39m
+      1 Linear |R| = [32m8.477424e-17[39m
+ 3 Nonlinear |R| = [32m5.863367e-07[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
 [32m Solve Converged![39m
+  Finished Solving                                                                       [[33m  8.74 s[39m] [[33m  262 MB[39m]
 
 Outlier Variable Residual Norms:
-  vonmises_stress: [33m8.116222e-04[39m
-  stress_xx: [33m7.208235e-04[39m
-  stress_xy: [33m9.740465e-04[39m
+  disp_y: [33m5.034541e-07[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   2.100000e+00 |   6.562500e-06 |   6.098289e+05 |   9.505822e+07 |
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
+|   2.100000e+00 |   6.562500e-03 |   6.098200e+02 |   9.093987e+01 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 18, time = 16.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m4.933084e+03[39m
-      0 Linear |R| = [32m4.933084e+03[39m
-      1 Linear |R| = [32m1.645997e-10[39m
- 1 Nonlinear |R| = [32m8.073510e+02[39m
-      0 Linear |R| = [32m8.073510e+02[39m
-      1 Linear |R| = [32m1.262859e-11[39m
- 2 Nonlinear |R| = [32m4.317614e+01[39m
-      0 Linear |R| = [32m4.317614e+01[39m
-      1 Linear |R| = [32m6.199417e-13[39m
- 3 Nonlinear |R| = [32m3.162125e-01[39m
-      0 Linear |R| = [32m3.162125e-01[39m
-      1 Linear |R| = [32m1.276438e-15[39m
- 4 Nonlinear |R| = [32m9.700132e-05[39m
+ 0 Nonlinear |R| = [32m5.099901e+00[39m
+      0 Linear |R| = [32m5.099901e+00[39m
+      1 Linear |R| = [32m1.531455e-13[39m
+ 1 Nonlinear |R| = [32m8.002520e-01[39m
+      0 Linear |R| = [32m8.002520e-01[39m
+      1 Linear |R| = [32m1.234023e-14[39m
+ 2 Nonlinear |R| = [32m3.299659e-02[39m
+      0 Linear |R| = [32m3.299659e-02[39m
+      1 Linear |R| = [32m4.608701e-16[39m
+ 3 Nonlinear |R| = [32m7.239776e-06[39m
+      0 Linear |R| = [32m7.239776e-06[39m
+      1 Linear |R| = [32m1.214854e-19[39m
+ 4 Nonlinear |R| = [32m1.517654e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 4
+  Finished Solving                                                                       [[33m 12.18 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m7.059342e-05[39m
-  stress_yy: [33m3.809333e-05[39m
-  stress_zz: [33m4.501561e-05[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   2.820000e+00 |   8.812500e-06 |   8.188936e+05 |   1.276357e+08 |
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
+|   2.820000e+00 |   8.812500e-03 |   8.188816e+02 |   1.221073e+02 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 19, time = 17.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m4.622288e+03[39m
-      0 Linear |R| = [32m4.622288e+03[39m
-      1 Linear |R| = [32m1.406611e-10[39m
- 1 Nonlinear |R| = [32m6.377314e+02[39m
-      0 Linear |R| = [32m6.377314e+02[39m
-      1 Linear |R| = [32m6.189282e-12[39m
- 2 Nonlinear |R| = [32m1.805601e+00[39m
-      0 Linear |R| = [32m1.805601e+00[39m
-      1 Linear |R| = [32m2.333302e-14[39m
- 3 Nonlinear |R| = [32m3.371877e-04[39m
+ 0 Nonlinear |R| = [32m4.764135e+00[39m
+      0 Linear |R| = [32m4.764135e+00[39m
+      1 Linear |R| = [32m1.287015e-13[39m
+ 1 Nonlinear |R| = [32m6.396755e-01[39m
+      0 Linear |R| = [32m6.396755e-01[39m
+      1 Linear |R| = [32m5.774989e-15[39m
+ 2 Nonlinear |R| = [32m2.113671e-03[39m
+      0 Linear |R| = [32m2.113671e-03[39m
+      1 Linear |R| = [32m1.483842e-17[39m
+ 3 Nonlinear |R| = [32m2.202119e-08[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m  8.86 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
 
 Outlier Variable Residual Norms:
-  stress_xx: [33m1.828578e-04[39m
-  stress_xy: [33m2.253765e-04[39m
+  disp_y: [33m1.944745e-08[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   3.684000e+00 |   1.151250e-05 |   1.069758e+06 |   1.667195e+08 |
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
+|   3.684000e+00 |   1.151250e-02 |   1.069742e+03 |   1.595000e+02 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 20, time = 18.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m3.962197e+03[39m
-      0 Linear |R| = [32m3.962197e+03[39m
-      1 Linear |R| = [32m1.215806e-10[39m
- 1 Nonlinear |R| = [32m1.487993e+02[39m
-      0 Linear |R| = [32m1.487993e+02[39m
-      1 Linear |R| = [32m1.877379e-12[39m
- 2 Nonlinear |R| = [32m1.199371e-01[39m
-      0 Linear |R| = [32m1.199371e-01[39m
-      1 Linear |R| = [32m1.463463e-15[39m
- 3 Nonlinear |R| = [32m2.852044e-05[39m
+ 0 Nonlinear |R| = [32m4.066540e+00[39m
+      0 Linear |R| = [32m4.066540e+00[39m
+      1 Linear |R| = [32m1.158585e-13[39m
+ 1 Nonlinear |R| = [32m1.256500e-01[39m
+      0 Linear |R| = [32m1.256500e-01[39m
+      1 Linear |R| = [32m1.798584e-15[39m
+ 2 Nonlinear |R| = [32m9.715655e-05[39m
+      0 Linear |R| = [32m9.715655e-05[39m
+      1 Linear |R| = [32m1.198848e-18[39m
+ 3 Nonlinear |R| = [32m1.721562e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m  8.53 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m1.642596e-05[39m
-  stress_xy: [33m1.835078e-05[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   4.684000e+00 |   1.463750e-05 |   1.359783e+06 |   2.052290e+08 |
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
+|   4.684000e+00 |   1.463750e-02 |   1.359761e+03 |   1.984805e+02 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 21, time = 19.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m4.265342e+03[39m
-      0 Linear |R| = [32m4.265342e+03[39m
-      1 Linear |R| = [32m1.187943e-10[39m
- 1 Nonlinear |R| = [32m2.353889e+02[39m
-      0 Linear |R| = [32m2.353889e+02[39m
-      1 Linear |R| = [32m1.850358e-12[39m
- 2 Nonlinear |R| = [32m1.000300e+00[39m
-      0 Linear |R| = [32m1.000300e+00[39m
-      1 Linear |R| = [32m2.780315e-15[39m
- 3 Nonlinear |R| = [32m2.631821e-04[39m
+ 0 Nonlinear |R| = [32m4.366044e+00[39m
+      0 Linear |R| = [32m4.366044e+00[39m
+      1 Linear |R| = [32m1.039664e-13[39m
+ 1 Nonlinear |R| = [32m2.306553e-01[39m
+      0 Linear |R| = [32m2.306553e-01[39m
+      1 Linear |R| = [32m2.107477e-15[39m
+ 2 Nonlinear |R| = [32m8.056885e-04[39m
+      0 Linear |R| = [32m8.056885e-04[39m
+      1 Linear |R| = [32m2.328595e-18[39m
+ 3 Nonlinear |R| = [32m2.188376e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m1.719290e-04[39m
-  stress_xx: [33m1.178115e-04[39m
-  stress_yy: [33m1.181594e-04[39m
+  Finished Solving                                                                       [[33m  9.10 s[39m] [[33m  260 MB[39m]
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   5.684000e+00 |   1.776250e-05 |   1.639405e+06 |   2.043027e+08 |
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
+|   5.684000e+00 |   1.776250e-02 |   1.639385e+03 |   2.004380e+02 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 22, time = 20.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m3.834630e+03[39m
-      0 Linear |R| = [32m3.834630e+03[39m
-      1 Linear |R| = [32m1.011264e-10[39m
- 1 Nonlinear |R| = [32m2.682513e+02[39m
-      0 Linear |R| = [32m2.682513e+02[39m
-      1 Linear |R| = [32m1.792939e-12[39m
- 2 Nonlinear |R| = [32m1.264070e-01[39m
-      0 Linear |R| = [32m1.264070e-01[39m
-      1 Linear |R| = [32m1.029280e-15[39m
- 3 Nonlinear |R| = [32m1.820412e-05[39m
+ 0 Nonlinear |R| = [32m3.911603e+00[39m
+      0 Linear |R| = [32m3.911603e+00[39m
+      1 Linear |R| = [32m9.898801e-14[39m
+ 1 Nonlinear |R| = [32m2.464110e-01[39m
+      0 Linear |R| = [32m2.464110e-01[39m
+      1 Linear |R| = [32m1.846539e-15[39m
+ 2 Nonlinear |R| = [32m1.886147e-03[39m
+      0 Linear |R| = [32m1.886147e-03[39m
+      1 Linear |R| = [32m7.359444e-18[39m
+ 3 Nonlinear |R| = [32m3.732688e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m  8.79 s[39m] [[33m  261 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m6.741588e-06[39m
-  stress_xx: [33m1.176030e-05[39m
-  stress_yy: [33m7.056884e-06[39m
-  stress_xy: [33m7.627537e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   6.684000e+00 |   2.088750e-05 |   1.895236e+06 |   2.026669e+08 |
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
+|   6.684000e+00 |   2.088750e-02 |   1.895208e+03 |   2.009708e+02 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 23, time = 21.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m3.201984e+03[39m
-      0 Linear |R| = [32m3.201984e+03[39m
-      1 Linear |R| = [32m8.563650e-11[39m
- 1 Nonlinear |R| = [32m8.263971e+01[39m
-      0 Linear |R| = [32m8.263971e+01[39m
-      1 Linear |R| = [32m1.200228e-12[39m
- 2 Nonlinear |R| = [32m5.374438e-02[39m
-      0 Linear |R| = [32m5.374438e-02[39m
-      1 Linear |R| = [32m4.542472e-16[39m
- 3 Nonlinear |R| = [32m1.268038e-05[39m
+ 0 Nonlinear |R| = [32m3.283885e+00[39m
+      0 Linear |R| = [32m3.283885e+00[39m
+      1 Linear |R| = [32m8.435247e-14[39m
+ 1 Nonlinear |R| = [32m8.197577e-02[39m
+      0 Linear |R| = [32m8.197577e-02[39m
+      1 Linear |R| = [32m9.240462e-16[39m
+ 2 Nonlinear |R| = [32m5.796842e-05[39m
+      0 Linear |R| = [32m5.796842e-05[39m
+      1 Linear |R| = [32m4.534492e-19[39m
+ 3 Nonlinear |R| = [32m1.673410e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 13.16 s[39m] [[33m  260 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m8.077680e-06[39m
-  stress_zz: [33m5.692998e-06[39m
-  stress_xy: [33m5.880887e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   7.684000e+00 |   2.401250e-05 |   2.119040e+06 |   2.042100e+08 |
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
+|   7.684000e+00 |   2.401250e-02 |   2.119007e+03 |   2.015501e+02 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 24, time = 22.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m3.147661e+03[39m
-      0 Linear |R| = [32m3.147661e+03[39m
-      1 Linear |R| = [32m1.060264e-10[39m
- 1 Nonlinear |R| = [32m9.928267e+01[39m
-      0 Linear |R| = [32m9.928267e+01[39m
-      1 Linear |R| = [32m9.802964e-13[39m
- 2 Nonlinear |R| = [32m4.052005e-02[39m
-      0 Linear |R| = [32m4.052005e-02[39m
-      1 Linear |R| = [32m4.545190e-16[39m
- 3 Nonlinear |R| = [32m5.764338e-06[39m
+ 0 Nonlinear |R| = [32m3.205235e+00[39m
+      0 Linear |R| = [32m3.205235e+00[39m
+      1 Linear |R| = [32m1.003769e-13[39m
+ 1 Nonlinear |R| = [32m1.000900e-01[39m
+      0 Linear |R| = [32m1.000900e-01[39m
+      1 Linear |R| = [32m8.934499e-16[39m
+ 2 Nonlinear |R| = [32m2.611466e-05[39m
+      0 Linear |R| = [32m2.611466e-05[39m
+      1 Linear |R| = [32m2.899930e-19[39m
+ 3 Nonlinear |R| = [32m1.646843e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 12.34 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m2.487158e-06[39m
-  stress_xx: [33m2.644015e-06[39m
-  stress_yy: [33m2.646433e-06[39m
-  stress_xy: [33m2.899110e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   8.684000e+00 |   2.713750e-05 |   2.304034e+06 |   2.028736e+08 |
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
+|   8.684000e+00 |   2.713750e-02 |   2.304004e+03 |   2.021827e+02 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 25, time = 23.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m3.008479e+03[39m
-      0 Linear |R| = [32m3.008479e+03[39m
-      1 Linear |R| = [32m8.724178e-11[39m
- 1 Nonlinear |R| = [32m1.825445e+02[39m
-      0 Linear |R| = [32m1.825445e+02[39m
-      1 Linear |R| = [32m1.440104e-12[39m
- 2 Nonlinear |R| = [32m9.397632e-02[39m
-      0 Linear |R| = [32m9.397632e-02[39m
-      1 Linear |R| = [32m7.555832e-16[39m
- 3 Nonlinear |R| = [32m1.520778e-05[39m
+ 0 Nonlinear |R| = [32m3.068297e+00[39m
+      0 Linear |R| = [32m3.068297e+00[39m
+      1 Linear |R| = [32m8.028781e-14[39m
+ 1 Nonlinear |R| = [32m1.881148e-01[39m
+      0 Linear |R| = [32m1.881148e-01[39m
+      1 Linear |R| = [32m1.360332e-15[39m
+ 2 Nonlinear |R| = [32m8.057295e-05[39m
+      0 Linear |R| = [32m8.057295e-05[39m
+      1 Linear |R| = [32m9.147369e-19[39m
+ 3 Nonlinear |R| = [32m1.640931e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 12.76 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m7.287826e-06[39m
-  stress_xx: [33m6.964197e-06[39m
-  stress_yy: [33m8.324601e-06[39m
-  stress_zz: [33m5.732402e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   9.684000e+00 |   3.026250e-05 |   2.442522e+06 |   2.030455e+08 |
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
+|   9.684000e+00 |   3.026250e-02 |   2.442487e+03 |   2.029795e+02 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 26, time = 24.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.920393e+03[39m
-      0 Linear |R| = [32m2.920393e+03[39m
-      1 Linear |R| = [32m8.113613e-11[39m
- 1 Nonlinear |R| = [32m7.965661e+01[39m
-      0 Linear |R| = [32m7.965661e+01[39m
-      1 Linear |R| = [32m7.083397e-13[39m
- 2 Nonlinear |R| = [32m3.881144e-02[39m
-      0 Linear |R| = [32m3.881144e-02[39m
-      1 Linear |R| = [32m2.052202e-16[39m
- 3 Nonlinear |R| = [32m5.225740e-06[39m
+ 0 Nonlinear |R| = [32m2.973676e+00[39m
+      0 Linear |R| = [32m2.973676e+00[39m
+      1 Linear |R| = [32m7.734276e-14[39m
+ 1 Nonlinear |R| = [32m7.590036e-02[39m
+      0 Linear |R| = [32m7.590036e-02[39m
+      1 Linear |R| = [32m7.016215e-16[39m
+ 2 Nonlinear |R| = [32m2.650801e-05[39m
+      0 Linear |R| = [32m2.650801e-05[39m
+      1 Linear |R| = [32m1.442554e-19[39m
+ 3 Nonlinear |R| = [32m1.603094e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 12.54 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m2.963759e-06[39m
-  stress_yy: [33m1.986082e-06[39m
-  stress_zz: [33m1.921372e-06[39m
-  stress_xy: [33m2.307632e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.068400e+01 |   3.338750e-05 |   2.498225e+06 |   2.043524e+08 |
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
+|   1.068400e+01 |   3.338750e-02 |   2.498186e+03 |   2.042621e+02 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 27, time = 25.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.527022e+03[39m
-      0 Linear |R| = [32m2.527022e+03[39m
-      1 Linear |R| = [32m7.157215e-11[39m
- 1 Nonlinear |R| = [32m1.328969e+02[39m
-      0 Linear |R| = [32m1.328969e+02[39m
-      1 Linear |R| = [32m1.101233e-12[39m
- 2 Nonlinear |R| = [32m4.018095e+00[39m
-      0 Linear |R| = [32m4.018095e+00[39m
-      1 Linear |R| = [32m1.265284e-13[39m
- 3 Nonlinear |R| = [32m1.113974e-03[39m
+ 0 Nonlinear |R| = [32m2.563687e+00[39m
+      0 Linear |R| = [32m2.563687e+00[39m
+      1 Linear |R| = [32m7.032208e-14[39m
+ 1 Nonlinear |R| = [32m1.305024e-01[39m
+      0 Linear |R| = [32m1.305024e-01[39m
+      1 Linear |R| = [32m1.083920e-15[39m
+ 2 Nonlinear |R| = [32m3.963281e-03[39m
+      0 Linear |R| = [32m3.963281e-03[39m
+      1 Linear |R| = [32m1.258722e-16[39m
+ 3 Nonlinear |R| = [32m4.590397e-08[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 13.43 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m6.022681e-04[39m
-  stress_xx: [33m5.968882e-04[39m
-  stress_yy: [33m5.571336e-04[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.168400e+01 |   3.651250e-05 |   2.518765e+06 |   2.062431e+08 |
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
+|   1.168400e+01 |   3.651250e-02 |   2.518729e+03 |   2.060646e+02 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 28, time = 26.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.749417e+03[39m
-      0 Linear |R| = [32m2.749417e+03[39m
-      1 Linear |R| = [32m7.288567e-11[39m
- 1 Nonlinear |R| = [32m1.134695e+02[39m
-      0 Linear |R| = [32m1.134695e+02[39m
-      1 Linear |R| = [32m8.354172e-13[39m
- 2 Nonlinear |R| = [32m4.725538e-02[39m
-      0 Linear |R| = [32m4.725538e-02[39m
-      1 Linear |R| = [32m2.341019e-16[39m
- 3 Nonlinear |R| = [32m5.663254e-06[39m
+ 0 Nonlinear |R| = [32m2.796411e+00[39m
+      0 Linear |R| = [32m2.796411e+00[39m
+      1 Linear |R| = [32m7.441353e-14[39m
+ 1 Nonlinear |R| = [32m1.134193e-01[39m
+      0 Linear |R| = [32m1.134193e-01[39m
+      1 Linear |R| = [32m8.452403e-16[39m
+ 2 Nonlinear |R| = [32m3.595769e-05[39m
+      0 Linear |R| = [32m3.595769e-05[39m
+      1 Linear |R| = [32m1.896027e-19[39m
+ 3 Nonlinear |R| = [32m1.576355e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 12.54 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m3.706327e-06[39m
-  stress_zz: [33m2.907461e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.268400e+01 |   3.963750e-05 |   2.533784e+06 |   2.080963e+08 |
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
+|   1.268400e+01 |   3.963750e-02 |   2.533747e+03 |   2.077681e+02 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 29, time = 27.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.933811e+03[39m
-      0 Linear |R| = [32m2.933811e+03[39m
-      1 Linear |R| = [32m7.888800e-11[39m
- 1 Nonlinear |R| = [32m7.851113e+01[39m
-      0 Linear |R| = [32m7.851113e+01[39m
-      1 Linear |R| = [32m8.158423e-13[39m
- 2 Nonlinear |R| = [32m3.535892e-02[39m
-      0 Linear |R| = [32m3.535892e-02[39m
-      1 Linear |R| = [32m3.482209e-16[39m
- 3 Nonlinear |R| = [32m4.283026e-06[39m
+ 0 Nonlinear |R| = [32m2.975740e+00[39m
+      0 Linear |R| = [32m2.975740e+00[39m
+      1 Linear |R| = [32m7.435472e-14[39m
+ 1 Nonlinear |R| = [32m7.625417e-02[39m
+      0 Linear |R| = [32m7.625417e-02[39m
+      1 Linear |R| = [32m7.731688e-16[39m
+ 2 Nonlinear |R| = [32m9.068573e-03[39m
+      0 Linear |R| = [32m9.068573e-03[39m
+      1 Linear |R| = [32m4.020603e-17[39m
+ 3 Nonlinear |R| = [32m8.029210e-08[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m 12.50 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m2.375473e-06[39m
-  stress_yy: [33m1.639358e-06[39m
-  stress_xy: [33m1.881695e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.368400e+01 |   4.276250e-05 |   2.546561e+06 |   2.097455e+08 |
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
-|   2.768400e+01 |   8.667856e-05 |   2.659309e+06 |   2.258070e+08 |
+|   1.368400e+01 |   4.276250e-02 |   2.546524e+03 |   2.092837e+02 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
+|   2.768400e+01 |   8.667869e-02 |   2.659278e+03 |   2.245031e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 30, time = 28.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.431832e+03[39m
-      0 Linear |R| = [32m2.431832e+03[39m
-      1 Linear |R| = [32m6.079297e-11[39m
- 1 Nonlinear |R| = [32m3.504084e+01[39m
-      0 Linear |R| = [32m3.504084e+01[39m
-      1 Linear |R| = [32m3.117635e-13[39m
- 2 Nonlinear |R| = [32m1.024369e-02[39m
-      0 Linear |R| = [32m1.024369e-02[39m
-      1 Linear |R| = [32m3.372490e-17[39m
- 3 Nonlinear |R| = [32m1.519115e-06[39m
-  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+ 0 Nonlinear |R| = [32m2.474000e+00[39m
+      0 Linear |R| = [32m2.474000e+00[39m
+      1 Linear |R| = [32m6.150691e-14[39m
+ 1 Nonlinear |R| = [32m3.499900e-02[39m
+      0 Linear |R| = [32m3.499900e-02[39m
+      1 Linear |R| = [32m3.131861e-16[39m
+ 2 Nonlinear |R| = [32m1.357693e-06[39m
+  Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m  7.64 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
 
 Outlier Variable Residual Norms:
-  disp_x: [33m9.961098e-07[39m
-  disp_y: [33m1.114926e-06[39m
+  disp_x: [33m1.192247e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.468400e+01 |   4.588750e-05 |   2.558063e+06 |   2.112613e+08 |
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
-|   2.768400e+01 |   8.667856e-05 |   2.659309e+06 |   2.258070e+08 |
-|   2.868400e+01 |   8.983527e-05 |   2.665475e+06 |   2.267430e+08 |
+|   1.468400e+01 |   4.588750e-02 |   2.558026e+03 |   2.106924e+02 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
+|   2.768400e+01 |   8.667869e-02 |   2.659278e+03 |   2.245031e+02 |
+|   2.868400e+01 |   8.983541e-02 |   2.665444e+03 |   2.253918e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 31, time = 29.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.508137e+03[39m
-      0 Linear |R| = [32m2.508137e+03[39m
-      1 Linear |R| = [32m7.355776e-11[39m
- 1 Nonlinear |R| = [32m5.642987e+01[39m
-      0 Linear |R| = [32m5.642987e+01[39m
-      1 Linear |R| = [32m5.283342e-13[39m
- 2 Nonlinear |R| = [32m1.686390e-02[39m
-      0 Linear |R| = [32m1.686390e-02[39m
-      1 Linear |R| = [32m6.627243e-17[39m
- 3 Nonlinear |R| = [32m1.926108e-06[39m
+ 0 Nonlinear |R| = [32m2.549257e+00[39m
+      0 Linear |R| = [32m2.549257e+00[39m
+      1 Linear |R| = [32m7.135521e-14[39m
+ 1 Nonlinear |R| = [32m5.773192e-02[39m
+      0 Linear |R| = [32m5.773192e-02[39m
+      1 Linear |R| = [32m4.866579e-16[39m
+ 2 Nonlinear |R| = [32m6.924226e-06[39m
+      0 Linear |R| = [32m6.924226e-06[39m
+      1 Linear |R| = [32m5.272706e-20[39m
+ 3 Nonlinear |R| = [32m1.585235e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m  9.01 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m6.825859e-07[39m
-  disp_x: [33m1.023046e-06[39m
-  disp_y: [33m1.188456e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.568400e+01 |   4.901250e-05 |   2.568569e+06 |   2.126634e+08 |
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
-|   2.768400e+01 |   8.667856e-05 |   2.659309e+06 |   2.258070e+08 |
-|   2.868400e+01 |   8.983527e-05 |   2.665475e+06 |   2.267430e+08 |
-|   2.968400e+01 |   9.299154e-05 |   2.671509e+06 |   2.276602e+08 |
+|   1.568400e+01 |   4.901250e-02 |   2.568531e+03 |   2.120153e+02 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
+|   2.768400e+01 |   8.667869e-02 |   2.659278e+03 |   2.245031e+02 |
+|   2.868400e+01 |   8.983541e-02 |   2.665444e+03 |   2.253918e+02 |
+|   2.968400e+01 |   9.299170e-02 |   2.671477e+03 |   2.262651e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 32, time = 30.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.316327e+03[39m
-      0 Linear |R| = [32m2.316327e+03[39m
-      1 Linear |R| = [32m6.716144e-11[39m
- 1 Nonlinear |R| = [32m1.164665e+02[39m
-      0 Linear |R| = [32m1.164665e+02[39m
-      1 Linear |R| = [32m9.716045e-13[39m
- 2 Nonlinear |R| = [32m5.460993e-02[39m
-      0 Linear |R| = [32m5.460993e-02[39m
-      1 Linear |R| = [32m3.080013e-16[39m
- 3 Nonlinear |R| = [32m9.181263e-06[39m
+ 0 Nonlinear |R| = [32m2.352006e+00[39m
+      0 Linear |R| = [32m2.352006e+00[39m
+      1 Linear |R| = [32m6.599902e-14[39m
+ 1 Nonlinear |R| = [32m9.759995e-02[39m
+      0 Linear |R| = [32m9.759995e-02[39m
+      1 Linear |R| = [32m5.981308e-16[39m
+ 2 Nonlinear |R| = [32m1.059290e-05[39m
+      0 Linear |R| = [32m1.059290e-05[39m
+      1 Linear |R| = [32m7.624592e-20[39m
+ 3 Nonlinear |R| = [32m1.601710e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m  9.27 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  stress_xx: [33m5.488278e-06[39m
-  stress_zz: [33m4.795624e-06[39m
-  stress_xy: [33m4.012364e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.668400e+01 |   5.213750e-05 |   2.578254e+06 |   2.139569e+08 |
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
-|   2.768400e+01 |   8.667856e-05 |   2.659309e+06 |   2.258070e+08 |
-|   2.868400e+01 |   8.983527e-05 |   2.665475e+06 |   2.267430e+08 |
-|   2.968400e+01 |   9.299154e-05 |   2.671509e+06 |   2.276602e+08 |
-|   3.068400e+01 |   9.614721e-05 |   2.677424e+06 |   2.285623e+08 |
+|   1.668400e+01 |   5.213750e-02 |   2.578217e+03 |   2.132724e+02 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
+|   2.768400e+01 |   8.667869e-02 |   2.659278e+03 |   2.245031e+02 |
+|   2.868400e+01 |   8.983541e-02 |   2.665444e+03 |   2.253918e+02 |
+|   2.968400e+01 |   9.299170e-02 |   2.671477e+03 |   2.262651e+02 |
+|   3.068400e+01 |   9.614739e-02 |   2.677391e+03 |   2.271242e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 33, time = 31.684, dt = 1
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m2.220834e+03[39m
-      0 Linear |R| = [32m2.220834e+03[39m
-      1 Linear |R| = [32m6.259643e-11[39m
- 1 Nonlinear |R| = [32m9.496556e+01[39m
-      0 Linear |R| = [32m9.496556e+01[39m
-      1 Linear |R| = [32m8.450958e-13[39m
- 2 Nonlinear |R| = [32m3.560386e-02[39m
-      0 Linear |R| = [32m3.560386e-02[39m
-      1 Linear |R| = [32m1.197619e-16[39m
- 3 Nonlinear |R| = [32m3.495948e-06[39m
+ 0 Nonlinear |R| = [32m2.258361e+00[39m
+      0 Linear |R| = [32m2.258361e+00[39m
+      1 Linear |R| = [32m6.124806e-14[39m
+ 1 Nonlinear |R| = [32m7.882136e-02[39m
+      0 Linear |R| = [32m7.882136e-02[39m
+      1 Linear |R| = [32m5.704445e-16[39m
+ 2 Nonlinear |R| = [32m7.744163e-06[39m
+      0 Linear |R| = [32m7.744163e-06[39m
+      1 Linear |R| = [32m3.657479e-20[39m
+ 3 Nonlinear |R| = [32m1.585726e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 3
+  Finished Solving                                                                       [[33m  9.22 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m1.375175e-06[39m
-  stress_xx: [33m1.423154e-06[39m
-  stress_yy: [33m1.561322e-06[39m
-  stress_zz: [33m1.515313e-06[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.768400e+01 |   5.526250e-05 |   2.587280e+06 |   2.152035e+08 |
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
-|   2.768400e+01 |   8.667856e-05 |   2.659309e+06 |   2.258070e+08 |
-|   2.868400e+01 |   8.983527e-05 |   2.665475e+06 |   2.267430e+08 |
-|   2.968400e+01 |   9.299154e-05 |   2.671509e+06 |   2.276602e+08 |
-|   3.068400e+01 |   9.614721e-05 |   2.677424e+06 |   2.285623e+08 |
-|   3.168400e+01 |   9.930248e-05 |   2.683230e+06 |   2.294490e+08 |
+|   1.768400e+01 |   5.526250e-02 |   2.587244e+03 |   2.144673e+02 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
+|   2.768400e+01 |   8.667869e-02 |   2.659278e+03 |   2.245031e+02 |
+|   2.868400e+01 |   8.983541e-02 |   2.665444e+03 |   2.253918e+02 |
+|   2.968400e+01 |   9.299170e-02 |   2.671477e+03 |   2.262651e+02 |
+|   3.068400e+01 |   9.614739e-02 |   2.677391e+03 |   2.271242e+02 |
+|   3.168400e+01 |   9.930266e-02 |   2.683196e+03 |   2.279703e+02 |
 +----------------+----------------+----------------+----------------+
 
 
 Time Step 34, time = 32, dt = 0.316
   Applying predictor with scale factor = 1
- 0 Nonlinear |R| = [32m5.237844e+02[39m
-      0 Linear |R| = [32m5.237844e+02[39m
-      1 Linear |R| = [32m9.971606e-12[39m
- 1 Nonlinear |R| = [32m1.351067e+00[39m
-      0 Linear |R| = [32m1.351067e+00[39m
-      1 Linear |R| = [32m6.556362e-15[39m
- 2 Nonlinear |R| = [32m3.556658e-04[39m
+ 0 Nonlinear |R| = [32m5.268239e-01[39m
+      0 Linear |R| = [32m5.268239e-01[39m
+      1 Linear |R| = [32m9.600518e-15[39m
+ 1 Nonlinear |R| = [32m6.627537e-04[39m
+      0 Linear |R| = [32m6.627537e-04[39m
+      1 Linear |R| = [32m5.337898e-18[39m
+ 2 Nonlinear |R| = [32m1.938868e-09[39m
   Nonlinear solve converged due to CONVERGED_FNORM_ABS iterations 2
+  Finished Solving                                                                       [[33m  6.17 s[39m] [[33m  262 MB[39m]
 [32m Solve Converged![39m
-
-Outlier Variable Residual Norms:
-  vonmises_stress: [33m2.299677e-04[39m
-  stress_xx: [33m1.455146e-04[39m
-  stress_yy: [33m1.667753e-04[39m
 
 Postprocessor Values:
 +----------------+----------------+----------------+----------------+
 | time           | disp_y_max     | react_y_top    | stress_vm_max  |
 +----------------+----------------+----------------+----------------+
 :                :                :                :                :
-|   1.868400e+01 |   5.838750e-05 |   2.595804e+06 |   2.164137e+08 |
-|   1.968400e+01 |   6.151250e-05 |   2.603886e+06 |   2.175775e+08 |
-|   2.068400e+01 |   6.463750e-05 |   2.611616e+06 |   2.187022e+08 |
-|   2.168400e+01 |   6.776250e-05 |   2.619065e+06 |   2.197930e+08 |
-|   2.268400e+01 |   7.088750e-05 |   2.626250e+06 |   2.208470e+08 |
-|   2.368400e+01 |   7.404512e-05 |   2.633209e+06 |   2.218754e+08 |
-|   2.468400e+01 |   7.720423e-05 |   2.639971e+06 |   2.228914e+08 |
-|   2.568400e+01 |   8.036311e-05 |   2.646577e+06 |   2.238834e+08 |
-|   2.668400e+01 |   8.352125e-05 |   2.653023e+06 |   2.248554e+08 |
-|   2.768400e+01 |   8.667856e-05 |   2.659309e+06 |   2.258070e+08 |
-|   2.868400e+01 |   8.983527e-05 |   2.665475e+06 |   2.267430e+08 |
-|   2.968400e+01 |   9.299154e-05 |   2.671509e+06 |   2.276602e+08 |
-|   3.068400e+01 |   9.614721e-05 |   2.677424e+06 |   2.285623e+08 |
-|   3.168400e+01 |   9.930248e-05 |   2.683230e+06 |   2.294490e+08 |
-|   3.200000e+01 |   1.002995e-04 |   2.685048e+06 |   2.297272e+08 |
+|   1.868400e+01 |   5.838750e-02 |   2.595769e+03 |   2.156106e+02 |
+|   1.968400e+01 |   6.151250e-02 |   2.603852e+03 |   2.167092e+02 |
+|   2.068400e+01 |   6.463750e-02 |   2.611583e+03 |   2.177695e+02 |
+|   2.168400e+01 |   6.776250e-02 |   2.619031e+03 |   2.188005e+02 |
+|   2.268400e+01 |   7.088750e-02 |   2.626218e+03 |   2.198048e+02 |
+|   2.368400e+01 |   7.404523e-02 |   2.633177e+03 |   2.207841e+02 |
+|   2.468400e+01 |   7.720434e-02 |   2.639940e+03 |   2.217410e+02 |
+|   2.568400e+01 |   8.036321e-02 |   2.646546e+03 |   2.226798e+02 |
+|   2.668400e+01 |   8.352136e-02 |   2.652991e+03 |   2.236003e+02 |
+|   2.768400e+01 |   8.667869e-02 |   2.659278e+03 |   2.245031e+02 |
+|   2.868400e+01 |   8.983541e-02 |   2.665444e+03 |   2.253918e+02 |
+|   2.968400e+01 |   9.299170e-02 |   2.671477e+03 |   2.262651e+02 |
+|   3.068400e+01 |   9.614739e-02 |   2.677391e+03 |   2.271242e+02 |
+|   3.168400e+01 |   9.930266e-02 |   2.683196e+03 |   2.279703e+02 |
+|   3.200000e+01 |   1.002997e-01 |   2.685014e+03 |   2.282359e+02 |
 +----------------+----------------+----------------+----------------+
 
-Finished Executing                                                                       [[33m174.94 s[39m] [[33m  309 MB[39m]
+Finished Executing                                                                       [[33m555.57 s[39m] [[33m  262 MB[39m]
